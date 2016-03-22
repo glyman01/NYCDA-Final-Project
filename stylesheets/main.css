@@ -77,24 +77,6 @@ table {
   fill: #58595B;
   animation: outerRingSpin 2s infinite linear; }
 
-#loadingProgressG {
-  width: 198px;
-  height: 30px;
-  overflow: hidden;
-  fill: rgba(0, 0, 0, 0.76);
-  margin: auto; }
-
-.wavy-load {
-  fill: rgba(255, 255, 255, 0.84);
-  margin-top: 0;
-  margin-left: -198px;
-  animation-name: wavyFill;
-  animation-duration: 3.64s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  width: 198px;
-  height: 30px; }
-
 /*.planet-outer-circle {
 	animation: outerRingSpin 1s infinite linear;
 
@@ -320,7 +302,8 @@ body {
   position: absolute;
   max-width: 960px;
   display: block;
-  margin: 0px auto; }
+  margin: 0px auto;
+  z-index: 1; }
   #loader-wrapper.js-show {
     display: none; }
 
