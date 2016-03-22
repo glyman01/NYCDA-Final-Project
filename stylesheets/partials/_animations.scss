@@ -29,3 +29,13 @@
 	0% {transform: rotateZ(0deg);}
 	100% {transform: rotateZ(360deg);}
 }
+
+@keyframes wavyFill{
+	0%{
+		margin-left:-198px;
+	}
+
+	100%{
+		margin-left:198px;
+	}
+}
