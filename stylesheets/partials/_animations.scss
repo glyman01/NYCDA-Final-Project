@@ -40,17 +40,10 @@
 
 @keyframes wavyFill {
   0% {
-    stroke-dashoffset: 221;
+    stroke-dashoffset: 220;
   }
-  50% {
-    stroke-dashoffset: -221;
-  }
-  66% {
-    stroke-dashoffset: 221;
-  }
-
   100% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: -220;
   }
 }
 
@@ -60,8 +53,8 @@
     to {transform: translate3d(0px, 0px, 0px);}    
 }
 
-@keyframes shadowGrow{
-    from {transform: translate3d(0px, 0px, 0px);}
-    65% {transform: translate3d(0px, 6px, 0px);}
-    to {transform: translate3d(0px, 0px, 0px);}    
+@keyframes shadowGrow {
+    0% {width: 90px;}
+    50% {width: 110px;}
+    100% {width: 90px;}    
 }

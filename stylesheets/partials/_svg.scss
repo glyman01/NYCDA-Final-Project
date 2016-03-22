@@ -46,5 +46,5 @@
 .wave {
 	stroke-dasharray: 220;
 	stroke-dashoffset: 220;
-	@include animation(wavyFill 2.7s ease-in-out infinite);
+	@include animation(wavyFill 2.4s linear infinite);
 }
