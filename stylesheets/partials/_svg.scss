@@ -1,8 +1,27 @@
 #Planet {
-	max-width: 320px;
+	max-width: 280px;
 	width: 100%;
 	height: auto;
     margin: 0px auto 50px;
+    display: block;
+}
+
+.planet {
+    @include animation(floatingPlanet 2.8s infinite ease-in-out);
+}
+
+/*svg#Planet:before {
+	content: '';
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.21);
+    border-radius: 235px;
+}*/
+
+#wavyLoader {
+	@extend #Planet;
+	max-width: 240px;
+	margin: 0px auto;
 }
 
 .planet-inner-circle {
@@ -16,11 +35,16 @@
 	width: 0px;
 	height: 0px;
 	fill: $drk-gry;
-	animation: ringSpin 4s infinite linear;
+	@include animation(ringSpin 5s infinite ease-in-out);
 }
 
 .planet-ring {
 	fill: $drk-gry;
-	animation: outerRingSpin 2s infinite linear;
+	@include animation(outerRingSpin 7s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55));
 }
 
+.wave {
+	stroke-dasharray: 240;
+	stroke-dashoffset: 240;
+	@include animation(wavyFill 2s ease-in-out infinite);
+}

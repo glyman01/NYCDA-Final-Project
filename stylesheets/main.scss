@@ -1,31 +1,61 @@
 @import 'partials/reset';
-@import 'partials/mixins';
 @import 'bourbon/bourbon';
+@import 'font-awesome/font-awesome';
+@import 'partials/mixins';
 @import 'partials/typography';
 @import 'partials/colors';
-@import 'partials/svg';
-@import 'partials/animations';
-@import 'partials/blocks';
-@import 'partials/grid';
 @import 'partials/buttons';
 @import 'partials/nav';
-
+@import 'partials/grid';
+@import 'partials/blocks';
+@import 'partials/svg';
+@import 'partials/animations';
 
 body {
-	background-color: $lte-gry;
+
+	font-family: $default-font;
+
+	@include breakpoint(small) {
+	}
+
+	@include breakpoint(med) {
+	}
+}
+
+html,body {
+  height:100%;
+  margin:0;
+}
+
+.content {
+  height:100%;
+  min-height:100%; /*for mozilla*/
+}
+
+html>body .content {
+  height:auto;
 }
 
 #loader-wrapper {
-	top: 50%;
-    left: 50%;
-    transform: translateY(-50%);
     position: absolute;
-    max-width: 960px;
-	display: block;
-	margin: 0px auto;
+    background-color: $lte-gry;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
 	z-index: 1;
 
 	&.js-show {
 		display: none;
 	}
+}
+
+.load-svg-wrapper {
+    position: relative;
+    top: 45%;
+    transform: translateY(-45%);
+}
+
+.wrapper {
+	position: relative;
+	height: 100%;
 }

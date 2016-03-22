@@ -13,11 +13,19 @@
 
 // Keyframes
 
-@keyframes ringSpin {
-	0% {transform: skew(0deg); transform: rotateZ(0deg); fill: rgba($drk-gry, 0.6);}
-	50% {transform: skew(0.5deg); fill: $drk-gry;}
-	100% {transform: skew(0deg); transform: rotateZ(360deg); fill: rgba($drk-gry, 0.6);}
-}
+/*@keyframes ringSpin {
+	0% {
+		transform: skew(0deg); 
+		transform: translateZ(0deg); 
+	}
+	50% {
+		transform: skew(0.5deg); 
+	}
+	100% {
+		transform: skew(0deg); 
+		transform: translateZ(360deg); 
+	}
+}*/
 
 @keyframes outerRingSpin {
 	0% {transform: skewY(0deg); transform: skewX(0deg);}
@@ -30,12 +38,17 @@
 	100% {transform: rotateZ(360deg);}
 }
 
-@keyframes wavyFill{
-	0%{
-		margin-left:-198px;
-	}
+@keyframes wavyFill {
+  from {
+    stroke-dashoffset: 240;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
-	100%{
-		margin-left:198px;
-	}
+@keyframes floatingPlanet{
+    from {transform: translate3d(0px, 0px, 0px);}
+    65% {transform: translate3d(0px, 6px, 0px);}
+    to {transform: translate3d(0px, 0px, 0px);}    
 }
