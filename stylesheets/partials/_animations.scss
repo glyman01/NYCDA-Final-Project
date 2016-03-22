@@ -1,0 +1,31 @@
+// transitions
+
+/*.planet-outer-circle {
+	animation: outerRingSpin 1s infinite linear;
+
+
+	// Helper class, for adding jQuery
+	&.stop-playing{
+		animation-play-state: paused;
+	}
+}*/
+
+
+// Keyframes
+
+@keyframes ringSpin {
+	0% {transform: skew(0deg); transform: rotateZ(0deg); fill: rgba($drk-gry, 0.6);}
+	50% {transform: skew(0.5deg); fill: $drk-gry;}
+	100% {transform: skew(0deg); transform: rotateZ(360deg); fill: rgba($drk-gry, 0.6);}
+}
+
+@keyframes outerRingSpin {
+	0% {transform: skewY(0deg); transform: skewX(0deg);}
+	50% {transform: scale(24deg); transform: skewX(0.5deg);}
+	100% {transform: skewY(0deg); transform: skewX(0deg);}
+}
+
+@keyframes spin {
+	0% {transform: rotateZ(0deg);}
+	100% {transform: rotateZ(360deg);}
+}

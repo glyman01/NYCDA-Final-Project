@@ -1,6 +1,6 @@
 .nav-wrapper {
 	position: fixed;
-	background-color: $mid-purp;
+	background-color: $lte-gry;
 	overflow: auto;
 	width: 100%;
 	top: 0;
@@ -9,7 +9,7 @@
 	.nav-main {
 		margin: 0;
 		padding: 0;
-		background-color: $mid-purp;
+		background-color: $drk-gry;
 
 	
 		li {
@@ -21,11 +21,11 @@
 			display: block;
 			padding: 20px;
 			text-decoration: none;
-			color: $drk-gry-purp;
+			color: $drk-gry;
 
 			&:hover, 
 			&.is-current {
-				background-color: rgba($pale-purp, 0.2);
+				background-color: rgba($drk-gry, 0.2);
 			}
 		}
 

@@ -1,6 +1,30 @@
+@import 'partials/reset';
+@import 'partials/mixins';
+@import 'bourbon/bourbon';
+@import 'partials/typography';
 @import 'partials/colors';
 @import 'partials/svg';
+@import 'partials/animations';
+@import 'partials/blocks';
+@import 'partials/grid';
+@import 'partials/buttons';
+@import 'partials/nav';
+
 
 body {
 	background-color: $lte-gry;
+}
+
+#loader-wrapper {
+	top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    max-width: 960px;
+	display: block;
+	margin: 0px auto;
+
+	&.js-show {
+		display: none;
+	}
 }
