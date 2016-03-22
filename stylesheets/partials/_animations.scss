@@ -39,15 +39,28 @@
 }
 
 @keyframes wavyFill {
-  from {
-    stroke-dashoffset: 240;
+  0% {
+    stroke-dashoffset: 221;
   }
-  to {
+  50% {
+    stroke-dashoffset: -221;
+  }
+  66% {
+    stroke-dashoffset: 221;
+  }
+
+  100% {
     stroke-dashoffset: 0;
   }
 }
 
 @keyframes floatingPlanet{
+    from {transform: translate3d(0px, 0px, 0px);}
+    65% {transform: translate3d(0px, 6px, 0px);}
+    to {transform: translate3d(0px, 0px, 0px);}    
+}
+
+@keyframes shadowGrow{
     from {transform: translate3d(0px, 0px, 0px);}
     65% {transform: translate3d(0px, 6px, 0px);}
     to {transform: translate3d(0px, 0px, 0px);}    

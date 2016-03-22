@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1; }
 
-ol, ul {
+ol, ul, li {
   list-style: none; }
 
 blockquote, q {
@@ -2308,7 +2308,7 @@ table {
   max-width: 280px;
   width: 100%;
   height: auto;
-  margin: 0px auto 50px;
+  margin: 0px auto;
   display: block; }
 
 .planet {
@@ -2349,11 +2349,11 @@ table {
   animation: outerRingSpin 7s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55); }
 
 .wave {
-  stroke-dasharray: 240;
-  stroke-dashoffset: 240;
-  -webkit-animation: wavyFill 2s ease-in-out infinite;
-  -moz-animation: wavyFill 2s ease-in-out infinite;
-  animation: wavyFill 2s ease-in-out infinite; }
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  -webkit-animation: wavyFill 2.7s ease-in-out infinite;
+  -moz-animation: wavyFill 2.7s ease-in-out infinite;
+  animation: wavyFill 2.7s ease-in-out infinite; }
 
 /*.planet-outer-circle {
 	animation: outerRingSpin 1s infinite linear;
@@ -2393,11 +2393,22 @@ table {
   100% {
     transform: rotateZ(360deg); } }
 @keyframes wavyFill {
-  from {
-    stroke-dashoffset: 240; }
-  to {
+  0% {
+    stroke-dashoffset: 221; }
+  50% {
+    stroke-dashoffset: -221; }
+  66% {
+    stroke-dashoffset: 221; }
+  100% {
     stroke-dashoffset: 0; } }
 @keyframes floatingPlanet {
+  from {
+    transform: translate3d(0px, 0px, 0px); }
+  65% {
+    transform: translate3d(0px, 6px, 0px); }
+  to {
+    transform: translate3d(0px, 0px, 0px); } }
+@keyframes shadowGrow {
   from {
     transform: translate3d(0px, 0px, 0px); }
   65% {
@@ -2437,5 +2448,31 @@ html > body .content {
 .wrapper {
   position: relative;
   height: 100%; }
+
+li, span {
+  -webkit-border-radius: 75px;
+  width: 90px;
+  margin: 0px auto; }
+
+span {
+  display: block;
+  left: 0;
+  position: relative;
+  top: 0; }
+
+span:nth-of-type(1) {
+  z-index: -9; }
+
+.planet-shadow h2 {
+  display: block;
+  height: 80px;
+  top: 165px; }
+
+.planet-shadow span:nth-of-type(1) {
+  left: -7px;
+  background: rgba(20, 20, 20, 0.06);
+  -webkit-transform: scaleY(0.3);
+  -webkit-box-shadow: 0px 0 42px 28px rgba(20, 20, 20, 0.06);
+  height: 100px; }
 
 /*# sourceMappingURL=main.css.map */
