@@ -1,0 +1,49 @@
+%btn {
+	padding: 1rem 2rem;
+	font-family: $default-font;
+	margin: .5rem 0;
+	font-weight: 700;
+	@include border-top-radius(4px);
+	@include border-left-radius(4px);
+	@include border-right-radius(4px);
+	@include border-bottom-radius(4px);
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	text-align: center;
+	border: 0;
+
+	&:hover {
+		background: $mid-purp;
+    }
+}
+
+.btn-norm {
+	@extend %btn;
+	background: $pale-purp;
+}
+
+.btn-highlight {
+	@extend %btn;
+	background: $pale-purp;
+	font-size: 24px;
+	padding: 2rem 3rem;
+	display: block;
+	width: auto;
+}
+
+.btn-disabled {
+	@extend .btn-norm;
+	opacity: 0.3;
+	color: white;
+
+	&:hover {
+		background: $pale-purp;
+		cursor: auto;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+}

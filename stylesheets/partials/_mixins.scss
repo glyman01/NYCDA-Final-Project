@@ -1,0 +1,20 @@
+@each $li in disc, circle, decimal {
+	.li-#{$li} {
+	list-style-type: $li;
+	}
+}
+
+
+@mixin breakpoint($size) {
+	@if $size == small {
+		@media all and (min-width: 480px) {
+		@content;
+		}
+	}
+
+	@else if $size == med {
+		@media all and (min-width: 768px) {
+		@content;
+		}
+	}
+}
