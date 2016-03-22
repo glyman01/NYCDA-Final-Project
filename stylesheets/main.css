@@ -1,3 +1,12 @@
+.planet-inner-circle {
+  fill: transparent; }
+
+.planet-outer-circle {
+  fill: #58595B; }
+
+.planet-ring {
+  fill: #58595B; }
+
 body {
   background-color: #DBDCDD; }
 
