@@ -54,7 +54,7 @@
 .wave {
 	stroke-dasharray: 220;
 	stroke-dashoffset: 220;
-	@include animation(wavyFill 2.4s linear infinite);
+	@include animation(wavyFill 2.7s linear infinite);
 }
 
 .planet-inner-circle-nav {
@@ -103,12 +103,16 @@ span:nth-of-type(1) {
   }
   
   span:nth-of-type(1){
-  	left: -7px;
-  	top: -10px;
-  	background:rgba(20, 20, 20, 0.06);
-  	box-shadow:0px 0 30px 28px rgba(20, 20, 20, 0.06);
-  	-webkit-transform:scaleY(.3);
-  	-webkit-box-shadow:0px 0 42px 28px rgba(20, 20, 20, 0.06);
-  	height:100px;
+    left: -7px;
+    top: -10px;
+    background: rgba(20, 20, 20, 0.03);
+    box-shadow: 0px 0 30px 28px rgba(20, 20, 20, 0.03);
+    transform: scaleY(.3);
+    -webkit-transform: scaleY(.3);
+    height: 100px;
   }
+}
+
+li.planet-shadow {
+    margin: 10px auto 20px;
 }
