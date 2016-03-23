@@ -2180,13 +2180,13 @@ table {
 	}
 }*/
 .nav-wrapper {
-  position: fixed;
+  position: absolute;
   overflow: auto;
   width: 100%;
   top: 0;
   z-index: 2;
   color: white;
-  margin: 40px auto; }
+  margin: 10px auto; }
   .nav-wrapper .nav-main {
     margin: 0;
     padding: 0;
@@ -2196,6 +2196,9 @@ table {
       float: left; }
       .nav-wrapper .nav-main li.top-nav {
         margin-top: 30px; }
+    .nav-wrapper .nav-main .planet-nav {
+      position: fixed;
+      left: 50%; }
     .nav-wrapper .nav-main a {
       display: block;
       padding: 20px;

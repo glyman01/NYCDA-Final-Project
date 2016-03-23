@@ -2,7 +2,7 @@
 $(document).on('ready', function(){
 	
 	var navHeight = $('.nav-wrapper').outerHeight(true);
-	$('body').css('margin-top', navHeight);
+	// $('body').css('margin-top', navHeight);
 
 	var navClass = $('.nav-main a');
 
@@ -24,12 +24,21 @@ $(document).on('ready', function(){
 
 		$.scrollTo(whereToScroll, {
 			duration: 1000,
-			offset: -navHeight
 		})
 	})
 
 
+	$(window).scroll(function() {    
 
+	    var navScroll = $(window).scrollTop();
+
+	    if (navScroll >= 100) {
+	        $(".js-scroll").addClass('planet-nav');
+	    } else {
+	    	$('.js-scroll').removeClass('planet-nav');
+	    }
+
+	});
 
 
 }); // end doc on ready
