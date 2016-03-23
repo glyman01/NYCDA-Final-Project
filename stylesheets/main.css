@@ -2369,6 +2369,47 @@ table {
 .planet-inner-circle-nav {
   fill: rgba(0, 0, 0, 0.2); }
 
+#loader-wrapper {
+  position: fixed;
+  background-color: #DBDCDD;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  overflow: hidden; }
+  #loader-wrapper.js-show {
+    display: none; }
+
+.load-svg-wrapper {
+  position: relative;
+  top: 45%;
+  transform: translateY(-45%); }
+
+span:nth-of-type(1) {
+  z-index: -9; }
+
+.planet-shadow li, .planet-shadow span {
+  border-radius: 75px;
+  width: 90px;
+  margin: 0px auto;
+  -webkit-animation: shadowGrow 2.8s ease-in-out infinite;
+  -moz-animation: shadowGrow 2.8s ease-in-out infinite;
+  animation: shadowGrow 2.8s ease-in-out infinite; }
+.planet-shadow span {
+  display: block;
+  left: 0;
+  position: relative;
+  top: 0; }
+.planet-shadow span:nth-of-type(1) {
+  left: -7px;
+  top: -10px;
+  background: rgba(20, 20, 20, 0.06);
+  box-shadow: 0px 0 30px 28px rgba(20, 20, 20, 0.06);
+  -webkit-transform: scaleY(0.3);
+  -webkit-box-shadow: 0px 0 42px 28px rgba(20, 20, 20, 0.06);
+  height: 100px; }
+
 /*.planet-outer-circle {
 	animation: outerRingSpin 1s infinite linear;
 
@@ -2440,50 +2481,9 @@ html, body {
 html > body .content {
   height: auto; }
 
-#loader-wrapper {
-  position: fixed;
-  background-color: #DBDCDD;
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  top: 0;
-  overflow: hidden; }
-  #loader-wrapper.js-show {
-    display: none; }
-
-.load-svg-wrapper {
-  position: relative;
-  top: 45%;
-  transform: translateY(-45%); }
-
 .wrapper {
   position: relative;
   height: 100%; }
-
-span:nth-of-type(1) {
-  z-index: -9; }
-
-.planet-shadow li, .planet-shadow span {
-  border-radius: 75px;
-  width: 90px;
-  margin: 0px auto;
-  -webkit-animation: shadowGrow 2.8s ease-in-out infinite;
-  -moz-animation: shadowGrow 2.8s ease-in-out infinite;
-  animation: shadowGrow 2.8s ease-in-out infinite; }
-.planet-shadow span {
-  display: block;
-  left: 0;
-  position: relative;
-  top: 0; }
-.planet-shadow span:nth-of-type(1) {
-  left: -7px;
-  top: -10px;
-  background: rgba(20, 20, 20, 0.06);
-  box-shadow: 0px 0 30px 28px rgba(20, 20, 20, 0.06);
-  -webkit-transform: scaleY(0.3);
-  -webkit-box-shadow: 0px 0 42px 28px rgba(20, 20, 20, 0.06);
-  height: 100px; }
 
 .intro {
   position: relative;
