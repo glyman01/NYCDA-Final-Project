@@ -23,7 +23,7 @@ $(document).on('ready', function(){
 		var whereToScroll = $(this).attr('href');
 
 		$.scrollTo(whereToScroll, {
-			duration: 500,
+			duration: 1000,
 			offset: -navHeight
 		})
 	})

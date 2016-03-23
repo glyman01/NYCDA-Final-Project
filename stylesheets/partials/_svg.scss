@@ -10,6 +10,14 @@
     @include animation(floatingPlanet 2.8s infinite ease-in-out);
 }
 
+#Planet-White {
+	max-width: 120px;
+	width: 100%;
+	height: auto;
+    margin: 0px auto;
+    display: block;
+}
+
 /*svg#Planet:before {
 	content: '';
     -webkit-box-shadow: 0 8px 6px -6px black;
@@ -47,4 +55,8 @@
 	stroke-dasharray: 220;
 	stroke-dashoffset: 220;
 	@include animation(wavyFill 2.4s linear infinite);
+}
+
+.planet-inner-circle-nav {
+	fill: rgba(black, 0.2);
 }

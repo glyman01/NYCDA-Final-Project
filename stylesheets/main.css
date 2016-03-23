@@ -2181,10 +2181,12 @@ table {
 }*/
 .nav-wrapper {
   position: fixed;
-  background-color: #DBDCDD;
   overflow: auto;
   width: 100%;
-  top: 0; }
+  top: 0;
+  z-index: 2;
+  color: white;
+  margin: 40px auto; }
   .nav-wrapper .nav-main {
     margin: 0;
     padding: 0;
@@ -2192,13 +2194,15 @@ table {
     .nav-wrapper .nav-main li {
       display: block;
       float: left; }
+      .nav-wrapper .nav-main li.top-nav {
+        margin-top: 30px; }
     .nav-wrapper .nav-main a {
       display: block;
       padding: 20px;
       text-decoration: none;
-      color: #58595B; }
-      .nav-wrapper .nav-main a:hover, .nav-wrapper .nav-main a.is-current {
-        background-color: rgba(88, 89, 91, 0.2); }
+      font-weight: bold;
+      font-size: 30px;
+      color: white; }
 
 .col-1 {
   width: 4%; }
@@ -2316,6 +2320,13 @@ table {
   -moz-animation: floatingPlanet 2.8s infinite ease-in-out;
   animation: floatingPlanet 2.8s infinite ease-in-out; }
 
+#Planet-White {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  display: block; }
+
 /*svg#Planet:before {
 	content: '';
     -webkit-box-shadow: 0 8px 6px -6px black;
@@ -2354,6 +2365,9 @@ table {
   -webkit-animation: wavyFill 2.4s linear infinite;
   -moz-animation: wavyFill 2.4s linear infinite;
   animation: wavyFill 2.4s linear infinite; }
+
+.planet-inner-circle-nav {
+  fill: rgba(0, 0, 0, 0.2); }
 
 /*.planet-outer-circle {
 	animation: outerRingSpin 1s infinite linear;
@@ -2427,12 +2441,14 @@ html > body .content {
   height: auto; }
 
 #loader-wrapper {
-  position: absolute;
+  position: fixed;
   background-color: #DBDCDD;
   max-width: 100%;
   width: 100%;
   height: 100%;
-  z-index: 1; }
+  z-index: 1;
+  top: 0;
+  overflow: hidden; }
   #loader-wrapper.js-show {
     display: none; }
 
@@ -2445,28 +2461,21 @@ html > body .content {
   position: relative;
   height: 100%; }
 
-li, span {
-  -webkit-border-radius: 75px;
+span:nth-of-type(1) {
+  z-index: -9; }
+
+.planet-shadow li, .planet-shadow span {
+  border-radius: 75px;
   width: 90px;
   margin: 0px auto;
   -webkit-animation: shadowGrow 2.8s ease-in-out infinite;
   -moz-animation: shadowGrow 2.8s ease-in-out infinite;
   animation: shadowGrow 2.8s ease-in-out infinite; }
-
-span {
+.planet-shadow span {
   display: block;
   left: 0;
   position: relative;
   top: 0; }
-
-span:nth-of-type(1) {
-  z-index: -9; }
-
-.planet-shadow h2 {
-  display: block;
-  height: 80px;
-  top: 165px; }
-
 .planet-shadow span:nth-of-type(1) {
   left: -7px;
   top: -10px;
@@ -2475,5 +2484,13 @@ span:nth-of-type(1) {
   -webkit-transform: scaleY(0.3);
   -webkit-box-shadow: 0px 0 42px 28px rgba(20, 20, 20, 0.06);
   height: 100px; }
+
+.intro {
+  position: relative;
+  background: url(../image/HomeHero_galaxy_compressed.jpg) top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 100%; }
 
 /*# sourceMappingURL=main.css.map */
