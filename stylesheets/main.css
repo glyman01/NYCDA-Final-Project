@@ -2257,6 +2257,23 @@ body {
       font-weight: bold;
       font-size: 30px;
       color: white; } }
+.sliding-middle-out {
+  display: inline-block;
+  position: relative;
+  margin-top: 10px; }
+  .sliding-middle-out:after {
+    content: '';
+    display: block;
+    margin: 8px auto 0;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .4s ease-in-out, background-color .4s ease-in-out; }
+  .sliding-middle-out:hover:after {
+    width: 100%;
+    background: white;
+    margin-top: 8px; }
+
 .col-1 {
   width: 4%; }
 
