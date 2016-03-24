@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(https://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -2268,7 +2269,7 @@ body {
     height: 3px;
     width: 0px;
     background: transparent;
-    transition: width .4s ease-in-out, background-color .4s ease-in-out; }
+    transition: width .24s ease-in-out, background-color .24s ease-in-out; }
   .sliding-middle-out:hover:after {
     width: 100%;
     background: white;
@@ -2372,7 +2373,7 @@ body {
   padding: 20px 0px; }
 
 .block-hero-purple {
-  background-color: #412D4F; }
+  background-color: #201624; }
 
 .block-hero-cyan {
   background-color: #139EB0; }
@@ -2615,6 +2616,11 @@ html > body .content {
 #About .headline {
   font-weight: bolder;
   font-size: 54px; }
+#About .about-txt {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #5B4C70; }
 
 .footer-txt {
   padding: 20px 0px; }
