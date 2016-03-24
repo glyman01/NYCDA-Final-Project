@@ -11,11 +11,10 @@
 }
 
 #Planet-White {
-	max-width: 120px;
 	width: 100%;
 	height: auto;
-    margin: 0px auto;
-    display: block;
+  margin: 0px auto;
+  display: block;
 }
 
 /*svg#Planet:before {
@@ -115,4 +114,11 @@ span:nth-of-type(1) {
 
 li.planet-shadow {
     margin: 10px auto 20px;
+}
+
+#page-nav {
+  max-width: 30px;
+  display: block;
+  margin: 0px auto;
+  @include animation(navBounce 1s ease-in-out infinite);
 }

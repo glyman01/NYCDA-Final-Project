@@ -9,9 +9,11 @@
 
 
 	.nav-main {
-		margin: 0;
+		margin: 0px auto;
 		padding: 0;
-		background-color: $drk-gry;
+		width: 100%;
+		max-width: 740px;
+		min-width: 480px;
 
 	
 		li {
@@ -19,13 +21,82 @@
 			float: left;
 
 			&.top-nav {
-				margin-top: 30px;
+				margin-top: 15px;
+			}
+		}
+
+	   	svg {
+	    	max-width: 110px;
+	    }
+
+		a {
+			display: block;
+			padding: 20px;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 24px;
+			color: white;
+
+
+			&:hover, 
+			&.is-current {
+			}
+		}
+
+	}
+}
+
+.desktop-nav {
+	display: none;
+}
+.mobile-nav {
+		display: block;
+	}
+
+@include breakpoint(small) {
+	.mobile-nav {
+		display: none;
+	}
+
+	.desktop-nav {
+		display: block;
+	}
+
+	.nav-wrapper {
+
+
+	.nav-main {
+		margin: 0px auto;
+		padding: 0;
+		width: 100%;
+		max-width: 740px;
+		min-width: 480px;
+
+	
+		li {
+			display: block;
+			float: left;
+
+			&.top-nav {
+				margin-top: 15px;
 			}
 		}
 
 		.planet-nav {
 		    position: fixed;
-		    left: 50%;
+		    z-index: 2;
+		    background-color: rgba(0, 0, 0, 0.6);
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    -webkit-transition: background-color .5s ease-in-out;
+		    -moz-transition: background-color .5s ease-in-out;
+		    transition: background-color .5s ease-in-out;
+
+		   	svg {
+		    	max-width: 90px;
+		    	width: 100%;
+		    }
 		}
 
 		a {
@@ -43,5 +114,9 @@
 		}
 
 	}
+}
+}
+
+@include breakpoint(med) {
 
 }

@@ -4,7 +4,7 @@ $(document).on('ready', function(){
 	var navHeight = $('.nav-wrapper').outerHeight(true);
 	// $('body').css('margin-top', navHeight);
 
-	var navClass = $('.nav-main a');
+	var navClass = $('.nav-main a', '.page-nav-svg');
 
 	// Hard coded
 	// $('.js-scroll').on('click', function(){
@@ -34,8 +34,16 @@ $(document).on('ready', function(){
 
 	    if (navScroll >= 100) {
 	        $(".js-scroll").addClass('planet-nav');
+	        $('.js-nav-reset').css({
+	   			position: 'initial',
+	   			height: '0',
+	   		});
 	    } else {
 	    	$('.js-scroll').removeClass('planet-nav');
+	    	$('.js-nav-reset').css({
+	   			position: 'absolute',
+	   			height: 'auto',
+	   		});
 	    }
 
 	});

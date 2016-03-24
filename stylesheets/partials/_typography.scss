@@ -1,1 +1,7 @@
-$default-font: Helvetica, Arial, sans-serif; 
+$default-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+body {
+	font-family: $default-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

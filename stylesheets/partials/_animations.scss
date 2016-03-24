@@ -64,3 +64,9 @@
     50% {width: 110px;}
     100% {width: 90px;}    
 }
+
+@keyframes navBounce {
+    0% {margin-top: 0px;}
+    50% {margin-top: 8px;}
+    100% {margin-top: 0px;}    
+}
