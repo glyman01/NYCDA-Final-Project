@@ -2387,9 +2387,11 @@ body {
   margin: 0px auto; }
 
 .block-center {
+  width: 100%;
   display: block;
+  margin: 0 auto 0;
   text-align: center;
-  margin: 0px auto; }
+  overflow: auto; }
 
 .block-hero, .block-hero-purple, .block-hero-cyan, .block-hero-drk-gry {
   color: white;
@@ -2405,6 +2407,17 @@ body {
 
 .block-hero-drk-gry {
   background-color: #58595B; }
+
+.block-hero-nasa, .block-nasa {
+  height: 500px;
+  max-height: 500px;
+  width: 100%;
+  padding: 0; }
+
+.block-nasa {
+  background-size: cover !important;
+  background-color: rgba(32, 22, 36, 0.85) !important;
+  background-blend-mode: multiply !important; }
 
 #Planet, #wavyLoader {
   max-width: 280px;
@@ -2610,8 +2623,12 @@ html > body .content {
 #intro .hero-txt-pad {
   position: relative;
   margin: 50% auto;
-  transform: translateY(-50%); }
-#intro .sub-head, #intro .big-hero-txt, #intro #About .headline, #About #intro .headline {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%); }
+#intro .sub-head, #intro .big-hero-txt, #intro .headline-about {
   color: white;
   font-size: 30px;
   text-align: center;
@@ -2633,26 +2650,26 @@ html > body .content {
   top: 0;
   left: 0; }
 
-#About .sub-head, #About #intro .big-hero-txt, #intro #About .big-hero-txt, #About .headline {
+.sub-head-about {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: lighter;
   font-size: 18px;
   margin: 0; }
-#About .headline {
+
+.headline-about {
   font-weight: bolder;
   font-size: 54px; }
-#About .about-txt {
+
+.about-txt {
   font-family: "Arvo", serif;
   font-weight: 400;
   font-style: italic;
   color: #5B4C70; }
 
-.block-center {
-  width: 100%;
-  display: block;
-  margin: 0 auto 0;
-  text-align: center;
-  overflow: auto; }
+footer {
+  background-color: #DBDCDD;
+  position: relative;
+  bottom: 0; }
 
 .footer-txt {
   padding: 20px 0px; }

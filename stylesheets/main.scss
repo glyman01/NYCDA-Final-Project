@@ -54,7 +54,11 @@ html>body .content {
     position: relative;
     margin: 50% auto;
     transform: translateY(-50%);
-}
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
 
   .sub-head {
     color: white;
@@ -85,15 +89,13 @@ html>body .content {
     left: 0;
 }
 
-
-#About {
-  .sub-head {
+.sub-head-about {
     font-family: $default-font;
     font-weight: lighter;
     font-size: 18px;
     margin: 0;
   }
-  .headline {
+  .headline-about {
     @extend .sub-head;
     font-weight: bolder;
     font-size: 54px;
@@ -104,19 +106,13 @@ html>body .content {
     font-weight: 400;
     font-style: italic;
     color: $lte-purple;
-  }
 }
 
-
-.block-center {
-  width: 100%;
-  display: block;
-  margin: 0 auto 0;
-  text-align: center;
-  overflow: auto;
+footer {
+  background-color: $lte-gry;
+  position: relative;
+  bottom: 0;
 }
-
-
 
 .footer-txt {
   padding: 20px 0px;

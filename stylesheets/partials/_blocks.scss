@@ -19,3 +19,17 @@
 	@extend .block-hero;
 	background-color: $drk-gry;
 }
+
+.block-hero-nasa {
+	height: 500px;
+	max-height: 500px;
+	width: 100%;
+	padding: 0;
+}
+
+.block-nasa {
+	@extend .block-hero-nasa;
+	background-size: cover !important;
+	background-color: rgba($drk-purple, 0.85) !important;
+	background-blend-mode: multiply !important;
+}

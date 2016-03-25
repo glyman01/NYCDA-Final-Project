@@ -53,8 +53,8 @@ $(document).on('ready', function(){
 	});
 
 	function handleResult(result){
-	    $("#apod_img_id").attr("src", result.url);
+	    $('.block-nasa').css('background', 'url(' + result.url + ') top center no-repeat');
 	}
-
+		
 
 }); // end doc on ready
