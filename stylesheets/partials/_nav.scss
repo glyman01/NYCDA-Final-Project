@@ -5,15 +5,16 @@
 	top: 0;
 	z-index: 2;
 	color: white;
-	margin: 10px auto;
+	margin: 10px auto 40px;
+	text-align: center;
 
 
 	.nav-main {
 		margin: 0px auto;
 		padding: 0;
-		width: 100%;
-		max-width: 740px;
-		min-width: 480px;
+/*		max-width: 740px;
+*/		overflow: auto;
+		display: inline-block;
 
 	
 		li {
@@ -25,16 +26,28 @@
 			}
 		}
 
+		.planet-nav {
+			    position: fixed;
+			    z-index: 2;
+			    background-color: rgba(0, 0, 0, 0.6);
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    -webkit-transition: background-color .5s ease-in-out;
+			    -moz-transition: background-color .5s ease-in-out;
+			    transition: background-color .5s ease-in-out;
+			}
+
 	   	svg {
-	    	max-width: 110px;
+	    	max-width: 90px;
 	    }
 
 		a {
 			display: block;
-			padding: 20px;
+			padding: 12px;
 			text-decoration: none;
 			font-weight: bold;
-			font-size: 24px;
+			font-size: 22px;
 			color: white;
 
 
@@ -54,67 +67,53 @@
 	}
 
 @include breakpoint(small) {
-	.mobile-nav {
-		display: none;
-	}
-
-	.desktop-nav {
-		display: block;
-	}
-
 	.nav-wrapper {
 
+		.nav-main {
+			margin: 0px auto;
+			padding: 0;
 
-	.nav-main {
-		margin: 0px auto;
-		padding: 0;
-		width: 100%;
-		max-width: 740px;
-		min-width: 480px;
+			li {
+				display: block;
+				float: left;
 
-	
-		li {
-			display: block;
-			float: left;
+				&.top-nav {
+					margin-top: 15px;
+				}
+			}
 
-			&.top-nav {
-				margin-top: 15px;
+			.planet-nav {
+			    position: fixed;
+			    z-index: 2;
+			    background-color: rgba(0, 0, 0, 0.6);
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    -webkit-transition: background-color .5s ease-in-out;
+			    -moz-transition: background-color .5s ease-in-out;
+			    transition: background-color .5s ease-in-out;
+			}
+
+			svg {
+			    	max-width: 110px;
+			    	width: 100%;
+			    }
+
+			a {
+				display: block;
+				padding: 20px;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 30px;
+				color: white;
+
+
+				&:hover, 
+				&.is-current {
+				}
 			}
 		}
-
-		.planet-nav {
-		    position: fixed;
-		    z-index: 2;
-		    background-color: rgba(0, 0, 0, 0.6);
-		    top: 0;
-		    left: 0;
-		    width: 100%;
-		    -webkit-transition: background-color .5s ease-in-out;
-		    -moz-transition: background-color .5s ease-in-out;
-		    transition: background-color .5s ease-in-out;
-
-		   	svg {
-		    	max-width: 90px;
-		    	width: 100%;
-		    }
-		}
-
-		a {
-			display: block;
-			padding: 20px;
-			text-decoration: none;
-			font-weight: bold;
-			font-size: 30px;
-			color: white;
-
-
-			&:hover, 
-			&.is-current {
-			}
-		}
-
 	}
-}
 }
 
 .sliding-middle-out {
@@ -131,13 +130,47 @@
 		background: transparent;
 		transition: width .24s ease-in-out, background-color .24s ease-in-out;
 	}
-	&:hover:after {
+	&:hover:after,
+	&.is-current:after,
+	&:focus:after {
 		width: 100%;
 		background: white;
 		margin-top: 8px;
+		outline: none;
+		outline: -webkit-focus-ring-color transparent;
 	}
 }
 
 @include breakpoint(med) {
+	.mobile-nav {
+		display: none;
+	}
+
+	.desktop-nav {
+		display: block;
+	}
+
+	.nav-wrapper {
+
+		.nav-main {
+
+			.planet-nav {
+			    position: fixed;
+			    z-index: 2;
+			    background-color: rgba(0, 0, 0, 0.6);
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    -webkit-transition: background-color .5s ease-in-out;
+			    -moz-transition: background-color .5s ease-in-out;
+			    transition: background-color .5s ease-in-out;
+			}
+			
+			svg {
+		    	max-width: 120px;
+		    	width: 100%;
+		}
+	}
+}
 
 }

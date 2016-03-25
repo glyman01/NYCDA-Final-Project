@@ -117,8 +117,8 @@ li.planet-shadow {
 }
 
 #page-nav {
+  position: absolute;
   max-width: 30px;
-  display: block;
-  margin: 0px auto;
+  bottom: 4%;
   @include animation(navBounce 1s ease-in-out infinite);
 }

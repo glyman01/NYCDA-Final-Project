@@ -6,14 +6,20 @@
 
 
 @mixin breakpoint($size) {
-	@if $size == small {
+	@if $size == mini {
+		@media all and (min-width: 480px) {
+		@content;
+		}
+	}
+
+	@else if $size == small {
 		@media all and (min-width: 480px) {
 		@content;
 		}
 	}
 
 	@else if $size == med {
-		@media all and (min-width: 640px) {
+		@media all and (min-width: 768px) {
 		@content;
 		}
 	}
