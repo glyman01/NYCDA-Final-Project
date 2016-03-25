@@ -44,5 +44,17 @@ $(document).on('ready', function(){
 
 	});
 
+	// NASA Apod API
+	var url = "https://api.nasa.gov/planetary/apod?api_key=O5Jg72w3pMyqTYFR6RljtmxA3cIlFvRux44sm0vV";
+
+	$.ajax({
+	  url: url,
+	  success: handleResult
+	});
+
+	function handleResult(result){
+	    $("#apod_img_id").attr("src", result.url);
+	}
+
 
 }); // end doc on ready
