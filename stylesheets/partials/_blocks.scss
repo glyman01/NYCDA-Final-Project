@@ -8,7 +8,7 @@
 .block-hero-purple {
 	@extend .block-hero;
 	background-color: $drk-purple;
-	padding-top: 200px;
+	padding: 200px 0 50px 0;
 }
 
 .block-hero-cyan {

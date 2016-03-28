@@ -10,13 +10,6 @@
 	margin: 0px auto;
 }
 
-.page-center {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	margin: 0px auto;
-}
-
 .block-center {
   width: 100%;
   display: block;
@@ -24,3 +17,9 @@
   text-align: center;
   overflow: auto;
 }
+
+.block-center-spaced {
+	@extend .block-center;
+	margin: 70px auto 0 !important;
+}
+

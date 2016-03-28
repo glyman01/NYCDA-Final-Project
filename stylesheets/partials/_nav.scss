@@ -62,6 +62,10 @@
 				font-size: 30px;
 			}
 
+			&:focus {
+				outline: none;
+    			outline-offset: 0;
+			}
 
 			&:hover, 
 			&.is-current {
