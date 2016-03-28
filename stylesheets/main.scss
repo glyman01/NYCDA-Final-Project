@@ -81,8 +81,9 @@ html>body .content {
     color: white;
     font-size: 30px;
     text-align: center;
-    font-weight: lighter;
+    font-weight: 100;
     line-height: 1.25em;
+    letter-spacing: .05em;
   }
 
   .big-hero-txt {
@@ -90,6 +91,8 @@ html>body .content {
     font-size: 86px;
     font-weight: bold;
     line-height: .8em;
+    letter-spacing: 0;
+
 
     @include breakpoint(small) {
         padding: 0px 50px;
@@ -100,22 +103,47 @@ html>body .content {
 }
 
 .sub-head-about {
-    font-family: $default-font;
-    font-weight: lighter;
-    font-size: 18px;
-    margin: 0;
-  }
-  .headline-about {
-    @extend .sub-head;
-    font-weight: bolder;
-    font-size: 54px;
+  font-family: $default-font;
+  font-weight: 100;
+  font-size: 21px;
+  margin: 0;
+  letter-spacing: .05em;
+}
+
+.headline-about {
+  &:before {
+    display: block;
+    margin-top: 20px;
+    content: '';
   }
 
-  .about-txt {
-    font-family: $arvo;
-    font-weight: 400;
-    font-style: italic;
-    color: $lte-purple;
+  @extend .sub-head;
+  font-weight: bolder;
+  font-size: 76px;
+  margin: 0;
+  line-height: 0.95em;
+}
+
+.about-txt {
+  font-family: $arvo;
+  font-weight: 400;
+  font-style: italic;
+  color: $lte-purple;
+  font-size: 26px;
+  margin-top: 40px;
+
+  @include breakpoint(med) {
+      text-align: left;
+  }
+
+}
+
+.definition {
+  @extend .about-txt;
+  font-family: $default-font;
+  color: white;
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 footer {

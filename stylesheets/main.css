@@ -2365,7 +2365,8 @@ body {
   padding: 20px 0px; }
 
 .block-hero-purple {
-  background-color: #201624; }
+  background-color: #201624;
+  padding-top: 200px; }
 
 .block-hero-cyan {
   background-color: #139EB0; }
@@ -2483,7 +2484,7 @@ li.planet-shadow {
   position: absolute;
   max-width: 30px;
   bottom: 4%;
-  left: 49%;
+  left: 48%;
   -webkit-animation: navBounce 1.3s ease-in-out infinite;
   -moz-animation: navBounce 1.3s ease-in-out infinite;
   animation: navBounce 1.3s ease-in-out infinite; }
@@ -2607,31 +2608,51 @@ html > body .content {
   color: white;
   font-size: 30px;
   text-align: center;
-  font-weight: lighter;
-  line-height: 1.25em; }
+  font-weight: 100;
+  line-height: 1.25em;
+  letter-spacing: .05em; }
 #intro .big-hero-txt {
   font-size: 86px;
   font-weight: bold;
-  line-height: .8em; }
+  line-height: .8em;
+  letter-spacing: 0; }
   @media all and (min-width: 480px) {
     #intro .big-hero-txt {
       padding: 0px 50px; } }
 
 .sub-head-about {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: lighter;
-  font-size: 18px;
-  margin: 0; }
+  font-weight: 100;
+  font-size: 21px;
+  margin: 0;
+  letter-spacing: .05em; }
 
 .headline-about {
   font-weight: bolder;
-  font-size: 54px; }
+  font-size: 76px;
+  margin: 0;
+  line-height: 0.95em; }
+  .headline-about:before {
+    display: block;
+    margin-top: 20px;
+    content: ''; }
 
-.about-txt {
+.about-txt, .definition {
   font-family: "Arvo", serif;
   font-weight: 400;
   font-style: italic;
-  color: #5B4C70; }
+  color: #5B4C70;
+  font-size: 26px;
+  margin-top: 40px; }
+  @media all and (min-width: 768px) {
+    .about-txt, .definition {
+      text-align: left; } }
+
+.definition {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+  margin: 10px 0; }
 
 footer {
   background-color: #DBDCDD;
