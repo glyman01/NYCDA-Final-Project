@@ -112,5 +112,14 @@ li.planet-shadow {
   max-width: 30px;
   bottom: 4%;
   left: 48%;
-  @include animation(navBounce 1.3s ease-in-out infinite);
+}
+
+.stop-svg-animate {
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
+}
+
+.start-svg-animate {
+  @include animation(navBounce 1.1s ease-in-out infinite);
 }

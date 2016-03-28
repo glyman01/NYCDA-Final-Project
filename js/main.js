@@ -54,6 +54,19 @@ $(document).on('ready', function(){
 	function handleResult(result){
 	    $('.block-nasa').css('background', 'url(' + result.url + ') top center no-repeat');
 	}
+
+
+	// Animating on scroll position
+	// $('.stats').addClass('hidden-svg').viewportChecker({
+ //        classToAdd: 'visible-svg animated stat-bar',
+ //        offset: 100
+ //    });
+
+    $('#page-nav').addClass('start-svg-animate').viewportChecker({
+        classToAdd: 'stop-svg-animate',
+        classToRemove: 'start-svg-animate',
+        offset: 100
+    });
 		
 
 }); // end doc on ready
