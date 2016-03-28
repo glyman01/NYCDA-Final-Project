@@ -12,8 +12,7 @@
 	.nav-main {
 		margin: 0px auto;
 		padding: 0;
-/*		max-width: 740px;
-*/		overflow: auto;
+		overflow: auto;
 		display: inline-block;
 
 	
@@ -40,6 +39,14 @@
 
 	   	svg {
 	    	max-width: 90px;
+
+	    	@include breakpoint(small) {
+	    		max-width: 110px;
+	    	}
+
+	    	@include breakpoint(med) {
+	    		max-width: 120px;
+	    	}
 	    }
 
 		a {
@@ -50,69 +57,17 @@
 			font-size: 22px;
 			color: white;
 
+			@include breakpoint(mini) {
+				padding: 20px;
+				font-size: 30px;
+			}
+
 
 			&:hover, 
 			&.is-current {
 			}
 		}
 
-	}
-}
-
-.desktop-nav {
-	display: none;
-}
-.mobile-nav {
-		display: block;
-	}
-
-@include breakpoint(small) {
-	.nav-wrapper {
-
-		.nav-main {
-			margin: 0px auto;
-			padding: 0;
-
-			li {
-				display: block;
-				float: left;
-
-				&.top-nav {
-					margin-top: 15px;
-				}
-			}
-
-			.planet-nav {
-			    position: fixed;
-			    z-index: 2;
-			    background-color: rgba(0, 0, 0, 0.6);
-			    top: 0;
-			    left: 0;
-			    width: 100%;
-			    -webkit-transition: background-color .5s ease-in-out;
-			    -moz-transition: background-color .5s ease-in-out;
-			    transition: background-color .5s ease-in-out;
-			}
-
-			svg {
-			    	max-width: 110px;
-			    	width: 100%;
-			    }
-
-			a {
-				display: block;
-				padding: 20px;
-				text-decoration: none;
-				font-weight: bold;
-				font-size: 30px;
-				color: white;
-
-
-				&:hover, 
-				&.is-current {
-				}
-			}
-		}
 	}
 }
 
@@ -141,36 +96,18 @@
 	}
 }
 
-@include breakpoint(med) {
-	.mobile-nav {
-		display: none;
-	}
+.desktop-nav {
+	display: none;
 
-	.desktop-nav {
+	@include breakpoint(med) {
 		display: block;
-	}
-
-	.nav-wrapper {
-
-		.nav-main {
-
-			.planet-nav {
-			    position: fixed;
-			    z-index: 2;
-			    background-color: rgba(0, 0, 0, 0.6);
-			    top: 0;
-			    left: 0;
-			    width: 100%;
-			    -webkit-transition: background-color .5s ease-in-out;
-			    -moz-transition: background-color .5s ease-in-out;
-			    transition: background-color .5s ease-in-out;
-			}
-			
-			svg {
-		    	max-width: 120px;
-		    	width: 100%;
-		}
 	}
 }
 
+.mobile-nav {
+	display: block;
+	
+	@include breakpoint(med) {
+		display: none;
+	}
 }

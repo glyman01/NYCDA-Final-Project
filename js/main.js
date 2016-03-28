@@ -31,8 +31,7 @@ $(document).on('ready', function(){
 	    if (navScroll >= 100) {
 	        $(".js-scroll").addClass('planet-nav');
 	        $('.js-nav-reset').css({
-	   			// position: 'initial',
-	   			height: '0',
+	   			height: '0'
 	   		});
 	    } else {
 	    	$('.js-scroll').removeClass('planet-nav');
@@ -58,3 +57,15 @@ $(document).on('ready', function(){
 		
 
 }); // end doc on ready
+
+
+// if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {           
+//             window.scrollTo(200,100) // first value for left offset, second value for top offset
+// } else {
+//             $('html,body').animate({
+//                 scrollTop: 100,
+//                 scrollLeft: 200
+//             }, 800, function(){
+//                 $('html,body').clearQueue();
+//             });
+// }

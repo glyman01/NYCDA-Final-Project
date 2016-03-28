@@ -7,7 +7,7 @@
 
 @mixin breakpoint($size) {
 	@if $size == mini {
-		@media all and (min-width: 480px) {
+		@media all and (min-width: 380px) {
 		@content;
 		}
 	}

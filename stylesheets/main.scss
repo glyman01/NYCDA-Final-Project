@@ -14,6 +14,8 @@
 body {
 
 	font-family: $default-font;
+  min-width: 320px;
+  width: 100%;
 
 	@include breakpoint(mini) {
   }
@@ -39,26 +41,41 @@ html>body .content {
   height:auto;
 }
 
+.center-contain {
+  position: relative;
+}
+
+.center-absolute {
+  height: 100%;
+  max-height: 35%;
+  min-height: 15%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  @include breakpoint(small) {
+    max-height: 25%;
+  }
+}
+
+
 .wrapper {
   position: relative;
   height: 100%;
 }
 
-#intro {
-  
-  &.intro {
-/*    padding: 100px 0 0;
-*/  }
-
-  .hero-txt-pad {
+.intro {
     position: relative;
-    margin: 50% auto;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-  }
+    background: url(../image/HomeHero_galaxy_compressed.jpg) top center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height:100%;
+    top: 0;
+    left: 0;
+}
+
+#intro {
 
   .sub-head {
     color: white;
@@ -73,20 +90,13 @@ html>body .content {
     font-size: 86px;
     font-weight: bold;
     line-height: .8em;
-    padding: 0px 50px;
+
+    @include breakpoint(small) {
+        padding: 0px 50px;
+    }
+
   }
 
-}
-
-.intro {
-    position: relative;
-    background: url(../image/HomeHero_galaxy_compressed.jpg) top center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    min-height:100%;
-    top: 0;
-    left: 0;
 }
 
 .sub-head-about {

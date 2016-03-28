@@ -17,14 +17,6 @@
   display: block;
 }
 
-/*svg#Planet:before {
-	content: '';
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.21);
-    border-radius: 235px;
-}*/
-
 #wavyLoader {
 	@extend #Planet;
 	max-width: 240px;
@@ -33,8 +25,7 @@
 
 .planet-inner-circle {
 	fill: rgba(white, 0.2);
-/*	animation: spin 2s infinite linear;
-*/}
+}
 
 .planet-outer-circle {
 	position: absolute;
@@ -120,5 +111,6 @@ li.planet-shadow {
   position: absolute;
   max-width: 30px;
   bottom: 4%;
-  @include animation(navBounce 1s ease-in-out infinite);
+  left: 49%;
+  @include animation(navBounce 1.3s ease-in-out infinite);
 }
