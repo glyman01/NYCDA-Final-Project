@@ -90,13 +90,16 @@
 		transition: width .24s ease-in-out, background-color .24s ease-in-out;
 	}
 	&:hover:after,
-	&.is-current:after,
 	&:focus:after {
 		width: 100%;
 		background: white;
 		margin-top: 8px;
 		outline: none;
 		outline: -webkit-focus-ring-color transparent;
+	}
+
+	&.is-current:after {
+		background: $sweet-green;
 	}
 }
 

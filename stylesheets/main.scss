@@ -82,7 +82,7 @@ html>body .content {
     font-size: 30px;
     text-align: center;
     font-weight: 100;
-    line-height: 1.25em;
+    line-height: 2.5em;
     letter-spacing: .05em;
   }
 
@@ -103,7 +103,7 @@ html>body .content {
 }
 
 .sub-head-about {
-  font-family: $default-font;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 21px;
   margin: 0;
@@ -131,9 +131,16 @@ html>body .content {
   color: $lte-purple;
   font-size: 26px;
   margin-top: 40px;
+  text-align: left;
+  padding: 0 30px;
+
+  @include breakpoint(small) {
+    padding: 0 100px;
+  }
 
   @include breakpoint(med) {
       text-align: left;
+      padding: 0;
   }
 
 }
@@ -144,6 +151,222 @@ html>body .content {
   color: white;
   font-size: 16px;
   margin: 10px 0;
+  line-height: 1.35em;
+}
+
+.hidden-animation {
+  opacity: 0;
+}
+
+.visible-animation {
+  opacity: 1;
+}
+
+.animation-begin {
+  @include animation(fadeInDown 1s ease-in-out 1);
+}
+
+#stats {
+  text-align: left;
+  display: none;
+
+  @include breakpoint(med){
+    display: block;
+  }
+
+  .about-field-header {
+      @extend .sub-head-about;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: .4em;
+      margin-bottom: 20px;
+    }
+
+  .stat-headings {
+    float: left;
+  }
+
+    .skill-header {
+      color: $lte-purple;
+      font-family: $arvo;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .pad12 {
+      margin: 34px 0;
+    }
+
+    ul.cc-stat-bar {
+        list-style-type: disc;
+        margin: 0 0 0 30px;
+
+        li {
+          list-style-type: disc;
+          margin: 10px 0 0 0;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+ 
+  .stat-bars {
+    float: right;
+    width: 64%;
+
+
+    .stat-bar-adobe {
+      position: relative;
+      display: block;
+      width: 99%;
+      transform-origin: bottom left;
+      height: 30px;
+      border-radius: 2px;
+      background-color: $cyan;
+      bottom: 6px;
+      @include animation(statsSlide 0.5s linear 1);
+    }
+
+    .stat-bar-fe {
+      @extend .stat-bar-adobe;
+      background-color: $sweet-green;
+      width: 82%;
+      margin-top: 24px;
+      @include animation(statsSlide 0.9s linear 1);
+    }
+
+    .stat-bar-art {
+      @extend .stat-bar-adobe;
+      background-color: $lte-purple;
+      margin-top: 21px;
+      width: 85%;
+      @include animation(statsSlide 1s linear 1);
+    }
+
+    .stat-bar-photog {
+      @extend .stat-bar-adobe;
+      background-color: $peach;
+      margin-top: 21px;
+      width: 75%;
+      @include animation(statsSlide 1.6s linear 1);
+    }
+
+    .stat-bar-work {
+      @extend .stat-bar-adobe;
+      background-color: $sweet-red;
+      margin-top: 21px;
+      width: 101%;
+      @include animation(statsSlide 2s linear 1);
+    }
+
+    .stat-bar-ai {
+      &:after {
+        @extend .stat-bar-adobe;
+        height: 10px;
+        background-color: rgba($lte-gry, 0.7);
+        content: '';
+        top: 0;
+        margin: 15px 0;
+        width: 97%;
+        @include animation(statsSlide 2.5s cubic-bezier(0.65, 0.05, 0.36, 1) 1);
+      }
+    }
+
+    .stat-bar-id {
+        &:after {
+        @extend .stat-bar-ai;
+        background-color: rgba($lte-gry, 0.6);
+        content: '';
+        top: 0;
+        width: 95%;
+        @include animation(statsSlide 2.7s cubic-bezier(0.65, 0.05, 0.36, 1) 1);
+      }
+    }
+
+    .stat-bar-ps {
+        &:after {
+        @extend .stat-bar-ai;
+        background-color: rgba($lte-gry, 0.48);
+        content: '';
+        top: 0;
+        width: 93%;
+        @include animation(statsSlide 2.9s cubic-bezier(0.6, 0.05, 0.36, 1) 1);
+      }
+    }
+
+    .stat-bar-ae {
+        &:after {
+        @extend .stat-bar-ai;
+        background-color: rgba($lte-gry, 0.2);
+        content: '';
+        top: 0;
+        width: 60%;
+        @include animation(statsSlide 3.5s ease-in-out 1);
+      }
+    }
+
+    .stat-bar-premiere {
+        &:after {
+        @extend .stat-bar-ai;
+        background-color: rgba($lte-gry, 0.3);
+        content: '';
+        top: 0;
+        width: 75%;
+        @include animation(statsSlide 3.1s cubic-bezier(0.5, 0.03, 0.3, 1) 1);
+      }
+    }
+
+    .stat-bar-mini-css {
+        &:after {
+        @extend .stat-bar-ai;
+        background-color: rgba($lte-gry, 0.6);
+        content: '';
+        top: -5px;
+        width: 80%;
+      }
+    }
+
+    .stat-bar-mini-jquery {
+        &:after {
+        @extend .stat-bar-ai;
+        background-color: rgba($lte-gry, 0.3);
+        content: '';
+        top: -4px;
+        margin-bottom: 14px;
+        width: 50%;
+      }
+    }
+    .stat-bar-mini-wp {
+      &:after {
+        @extend .stat-bar-mini-jquery;
+          background-color: rgba($lte-gry, 0.25);
+          width: 76%;
+      }
+    }
+
+    .stat-bar-mini-sass {
+      &:after {
+        @extend .stat-bar-mini-jquery;
+          background-color: rgba($lte-gry, 0.25);
+          width: 57%;
+      }
+    }
+  }
+}
+
+#Contact {
+  .headline-about{
+    color: rgba($sweet-red, 0.9);
+    font-family: $arvo;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-size: 6em;
+    @include animation(fadeInDown 1.6s ease 1);
+  }
+}
+
+#About {
+  padding: 50px 0;
 }
 
 footer {
@@ -154,12 +377,4 @@ footer {
 
 .footer-txt {
   padding: 20px 0px;
-}
-
-.hidden-svg {
-  opacity: 0;
-}
-
-.visible-svg {
-  opacity: 100;
 }

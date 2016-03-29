@@ -8,12 +8,12 @@
 .block-hero-purple {
 	@extend .block-hero;
 	background-color: $drk-purple;
-	padding: 200px 0 50px 0;
+	padding: 180px 0 50px 0;
 }
 
-.block-hero-cyan {
+.block-hero-green {
 	@extend .block-hero;
-	background-color: $sweet-cyan;
+	background-color: $sweet-green;
 }
 
 .block-hero-drk-gry {
@@ -21,7 +21,7 @@
 	background-color: $drk-gry;
 }
 
-.block-hero-nasa {
+%block-hero-nasa {
 	height: 500px;
 	max-height: 500px;
 	width: 100%;
@@ -29,8 +29,9 @@
 }
 
 .block-nasa {
-	@extend .block-hero-nasa;
+	@extend %block-hero-nasa;
 	background-size: cover !important;
 	background-color: rgba($drk-purple, 0.85) !important;
 	background-blend-mode: multiply !important;
+	text-align: center;
 }

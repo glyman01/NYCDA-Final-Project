@@ -2,15 +2,16 @@
 $(document).on('ready', function(){
 	
 	var navHeight = $('.nav-wrapper').outerHeight(true);
-	// $('body').css('margin-top', navHeight);
 
-	var navClass = $('.nav-main a, .page-nav-svg');
+	var navClass = $('.nav-main a, .page-nav-svg, .section-btn');
 
+
+	// Need to write an if statement that detects class for 'Resume' to remove e.preventDefault();
 
 	// Global scrollTo click event
+
 	navClass.on('click', function(e){
 		e.preventDefault();
-		// console.log($(this).attr('href'))
 
 		navClass.removeClass('is-current');
 
@@ -57,28 +58,25 @@ $(document).on('ready', function(){
 
 
 	// Animating on scroll position
-	// $('.stats').addClass('hidden-svg').viewportChecker({
- //        classToAdd: 'visible-svg animated stat-bar',
- //        offset: 100
+	$('#stats').addClass('hidden-animation').viewportChecker({
+        classToAdd: 'animation-begin visible-animation',
+        offset: 200
+    });
+
+	// var animateStats = $('.stat-bar-adobe, .stat-bar-ai, .stat-bar-fe, .stat-bar-id, .stat-bar-ps, .stat-bar-premiere, .stat-bar-ae, .stat-bar-mini-css, .stat-bar-mini-wp, .stat-bar-mini-jquery, .stat-bar-mini-sass, .stat-bar-art, .stat-bar-photog, .stat-bar-work');
+	// // var animateStats = $('.stat-bars');
+    
+ //    animateStats.addClass('stat-bar-animate').viewportChecker({
+ //        classToAdd: animateStats,
+ //        classToRemove: 'stat-bar-animate',
+ //        offset: 180
  //    });
 
     $('#page-nav').addClass('start-svg-animate').viewportChecker({
         classToAdd: 'stop-svg-animate',
         classToRemove: 'start-svg-animate',
-        offset: 100
+        offset: 400
     });
 		
 
 }); // end doc on ready
-
-
-// if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {           
-//             window.scrollTo(200,100) // first value for left offset, second value for top offset
-// } else {
-//             $('html,body').animate({
-//                 scrollTop: 100,
-//                 scrollLeft: 200
-//             }, 800, function(){
-//                 $('html,body').clearQueue();
-//             });
-// }

@@ -24,8 +24,9 @@
 	}
 
 	&:focus{
+		@extend .section-btn:hover;
 		color: $lte-gry;
-		outline: dotted rgba(233, 30, 99, 0.32);
+		outline: dotted rgba($sweet-red, 0.8);
     	outline-offset: 14px;
 	}
 }
