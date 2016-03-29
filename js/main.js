@@ -5,10 +5,9 @@ $(document).on('ready', function(){
 
 	var navClass = $('.nav-main a, .page-nav-svg, .section-btn');
 
+	// Global scrollTo click event
 
 	// Need to write an if statement that detects class for 'Resume' to remove e.preventDefault();
-
-	// Global scrollTo click event
 
 	navClass.on('click', function(e){
 		e.preventDefault();
@@ -20,7 +19,7 @@ $(document).on('ready', function(){
 		var whereToScroll = $(this).attr('href');
 
 		$.scrollTo(whereToScroll, {
-			duration: 1000,
+			duration: 600,
 		})
 	})
 
@@ -60,7 +59,7 @@ $(document).on('ready', function(){
 	// Animating on scroll position
 	$('#stats').addClass('hidden-animation').viewportChecker({
         classToAdd: 'animation-begin visible-animation',
-        offset: 200
+        offset: -100
     });
 
 	// var animateStats = $('.stat-bar-adobe, .stat-bar-ai, .stat-bar-fe, .stat-bar-id, .stat-bar-ps, .stat-bar-premiere, .stat-bar-ae, .stat-bar-mini-css, .stat-bar-mini-wp, .stat-bar-mini-jquery, .stat-bar-mini-sass, .stat-bar-art, .stat-bar-photog, .stat-bar-work');
@@ -77,6 +76,37 @@ $(document).on('ready', function(){
         classToRemove: 'start-svg-animate',
         offset: 400
     });
+
+
+    
+    // Faking the animation intro
+    setTimeout(function(){
+
+        $('body').addClass('loaded');
+        $('.wrapper').removeClass('hidden');
+    
+    }, 4000);
+
+
+    // Let's get this working
+
+    // no scroll
+	function noScroll() {
+		window.scrollTo(0, 0);
+	}
+
+    noScroll(function(){
+    	if ($('body').hasClass('.loaded')) {
+		
+			// enable scrolling
+			window.removeEventListener('scroll', noscroll);
+		
+		} else {
+		
+			// disable scrolling 
+			window.addEventListener('scroll', noscroll);		
+		};
+    })
 		
 
 }); // end doc on ready

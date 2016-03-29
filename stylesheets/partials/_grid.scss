@@ -19,6 +19,11 @@
 
 .block-center-spaced {
 	@extend .block-center;
-	margin: 50px auto 0 !important;
+	margin: 22px auto 20px;
+}
+
+.overflow {
+	@extend .block-center;
+	overflow: auto;
 }
 

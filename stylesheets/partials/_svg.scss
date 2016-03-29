@@ -1,3 +1,33 @@
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+
+  .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: $lte-gry;
+    -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(0);  /* IE 9 */
+    transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+  }
+
+  .loader-section.section-left {
+    left: 0;
+  }
+
+  .loader-section.section-right {
+    right: 0;
+  }
+
+}
+
+
 #Planet {
 	max-width: 280px;
 	width: 100%;
@@ -49,21 +79,6 @@
 
 .planet-inner-circle-nav {
 	fill: rgba(black, 0.2);
-}
-
-#loader-wrapper {
-  position: fixed;
-  background-color: $lte-gry;
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-	z-index: 1;
-  top: 0;
-  overflow: hidden;
-
-	&.js-show {
-		display: none;
-	}
 }
 
 .load-svg-wrapper {

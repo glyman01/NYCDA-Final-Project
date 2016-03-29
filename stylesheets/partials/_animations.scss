@@ -99,3 +99,53 @@
     transform: none;
   }
 }
+
+@keyframes fadeOut {
+   from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes loadedLeft {
+   from {
+    -webkit-transform: translateX(0%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(0%);  /* IE 9 */
+    transform: translateX(0%);  /* Firefox 16+, IE 10+, Opera */
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+@keyframes loadedRight {
+   from {
+    -webkit-transform: translateX(0%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(0%);  /* IE 9 */
+    transform: translateX(0%);  /* Firefox 16+, IE 10+, Opera */
+  }
+
+  to {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+@keyframes loadedFade {
+   from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
