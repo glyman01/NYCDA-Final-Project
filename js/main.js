@@ -66,7 +66,7 @@ $(document).on('ready', function(){
 
     $('.stat-bars').viewportChecker({
         classToAdd: 'is-playing',
-        offset: 100
+        offset: 400
     });
 
 	// var animateStats = $('.stat-bar-adobe, .stat-bar-ai, .stat-bar-fe, .stat-bar-id, .stat-bar-ps, .stat-bar-premiere, .stat-bar-ae, .stat-bar-mini-css, .stat-bar-mini-wp, .stat-bar-mini-jquery, .stat-bar-mini-sass, .stat-bar-art, .stat-bar-photog, .stat-bar-work');

@@ -71,17 +71,8 @@
     100% {bottom: 4.3%;}    
 }
 
-@keyframes statsSlideParent {
-  from {
-      width: 0%;
-    }
 
-  to {
-    width: 64%;
-  }
-}
-
-@keyframes statsSlide {
+@keyframes statsSlide101 {
 	from {
 	    opacity: 0;
 	    -webkit-transform: translateX(0%, 0, 0);
@@ -93,14 +84,214 @@
     opacity: 1;
     -webkit-transform: translateX(-100%, 0, 0);
     transform: translateX(-100%, 0, 0);
-    // end at varying widths
     // specifying a width here, WORKS.
-    // width: 99%;
+    width: 101%;
   }
 }
 
+@keyframes statsSlide99 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
 
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 99%;
+  }
+}
 
+@keyframes statsSlide97 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 97%;
+  }
+}
+
+@keyframes statsSlide95 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 95%;
+  }
+}
+
+@keyframes statsSlide93 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 93%;
+  }
+}
+
+@keyframes statsSlide85 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 85%;
+  }
+}
+
+@keyframes statsSlide82 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 82%;
+  }
+}
+
+@keyframes statsSlide80 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 80%;
+  }
+}
+
+@keyframes statsSlide76 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 76%;
+  }
+}
+
+@keyframes statsSlide75 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 75%;
+  }
+}
+
+@keyframes statsSlide60 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 60%;
+  }
+}
+
+@keyframes statsSlide57 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 57%;
+  }
+}
+
+@keyframes statsSlide50 {
+  from {
+      opacity: 0;
+      -webkit-transform: translateX(0%, 0, 0);
+      transform: translateX(0%, 0, 0);
+      width: 0%;
+    }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    // specifying a width here, WORKS.
+    width: 50%;
+  }
+}
 
 @keyframes fadeInDown {
    from {

@@ -2712,12 +2712,7 @@ li.planet-shadow {
     bottom: 4%; }
   100% {
     bottom: 4.3%; } }
-@keyframes statsSlideParent {
-  from {
-    width: 0%; }
-  to {
-    width: 64%; } }
-@keyframes statsSlide {
+@keyframes statsSlide101 {
   from {
     opacity: 0;
     -webkit-transform: translateX(0%, 0, 0);
@@ -2726,7 +2721,140 @@ li.planet-shadow {
   to {
     opacity: 1;
     -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0); } }
+    transform: translateX(-100%, 0, 0);
+    width: 101%; } }
+@keyframes statsSlide99 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 99%; } }
+@keyframes statsSlide97 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 97%; } }
+@keyframes statsSlide95 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 95%; } }
+@keyframes statsSlide93 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 93%; } }
+@keyframes statsSlide85 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 85%; } }
+@keyframes statsSlide82 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 82%; } }
+@keyframes statsSlide80 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 80%; } }
+@keyframes statsSlide76 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 76%; } }
+@keyframes statsSlide75 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 75%; } }
+@keyframes statsSlide60 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 60%; } }
+@keyframes statsSlide57 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 57%; } }
+@keyframes statsSlide50 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0%, 0, 0);
+    transform: translateX(0%, 0, 0);
+    width: 0%; }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-100%, 0, 0);
+    transform: translateX(-100%, 0, 0);
+    width: 50%; } }
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -2984,7 +3112,7 @@ html > body .content {
       font-weight: 400; }
   #stats .stat-bars {
     float: right;
-    width: 0; }
+    width: 64%; }
     #stats .stat-bars > div {
       animation-play-state: paused; }
     #stats .stat-bars.is-playing > div {
@@ -2992,32 +3120,26 @@ html > body .content {
     #stats .stat-bars .stat-bar-adobe, #stats .stat-bars .stat-bar-fe, #stats .stat-bars .stat-bar-art, #stats .stat-bars .stat-bar-photog, #stats .stat-bars .stat-bar-work, #stats .stat-bars .stat-bar-ai, #stats .stat-bars .stat-bar-id, #stats .stat-bars .stat-bar-ps, #stats .stat-bars .stat-bar-ae, #stats .stat-bars .stat-bar-premiere, #stats .stat-bars .stat-bar-mini-css, #stats .stat-bars .stat-bar-mini-jquery, #stats .stat-bars .stat-bar-mini-wp, #stats .stat-bars .stat-bar-mini-sass {
       position: relative;
       display: block;
-      width: 99%;
       transform-origin: bottom left;
       height: 30px;
       border-radius: 2px;
       background-color: #4891A5;
-      bottom: 6px; }
+      bottom: 6px;
+      -webkit-animation: statsSlide99 1.4s 1 forwards;
+      -moz-animation: statsSlide99 1.4s 1 forwards;
+      animation: statsSlide99 1.4s 1 forwards; }
     #stats .stat-bars .stat-bar-fe {
       background-color: #489179;
-      width: 82%;
       margin-top: 24px;
-      -webkit-animation-duration: 0.7s;
-      -moz-animation-duration: 0.7s;
-      animation-duration: 0.7s;
-      -webkit-animation-delay: 0;
-      -moz-animation-delay: 0;
-      animation-delay: 0; }
+      -webkit-animation: statsSlide82 1.4s 1 forwards;
+      -moz-animation: statsSlide82 1.4s 1 forwards;
+      animation: statsSlide82 1.4s 1 forwards; }
     #stats .stat-bars .stat-bar-art {
       background-color: #5B4C70;
       margin-top: 21px;
-      width: 85%;
-      -webkit-animation-duration: 1s;
-      -moz-animation-duration: 1s;
-      animation-duration: 1s;
-      -webkit-animation-delay: 0;
-      -moz-animation-delay: 0;
-      animation-delay: 0; }
+      -webkit-animation: statsSlide85 1.4s 1 forwards;
+      -moz-animation: statsSlide85 1.4s 1 forwards;
+      animation: statsSlide85 1.4s 1 forwards; }
     #stats .stat-bars .stat-bar-photog {
       background-color: #DC9C6E;
       margin-top: 21px;
@@ -3028,82 +3150,49 @@ html > body .content {
     #stats .stat-bars .stat-bar-work {
       background-color: #ED5966;
       margin-top: 21px;
-      width: 101%;
-      -webkit-animation-duration: 3.4s;
-      -moz-animation-duration: 3.4s;
-      animation-duration: 3.4s; }
+      -webkit-animation: statsSlide101 3.4s 1 forwards;
+      -moz-animation: statsSlide101 3.4s 1 forwards;
+      animation: statsSlide101 3.4s 1 forwards; }
     #stats .stat-bars .stat-bar-ai, #stats .stat-bars .stat-bar-id, #stats .stat-bars .stat-bar-ps, #stats .stat-bars .stat-bar-ae, #stats .stat-bars .stat-bar-premiere, #stats .stat-bars .stat-bar-mini-css, #stats .stat-bars .stat-bar-mini-jquery, #stats .stat-bars .stat-bar-mini-wp, #stats .stat-bars .stat-bar-mini-sass {
       height: 10px;
       background-color: rgba(219, 220, 221, 0.7);
       content: '';
       top: 0;
       margin: 15px 0;
-      width: 97%;
-      -webkit-animation-duration: 2.5s;
-      -moz-animation-duration: 2.5s;
-      animation-duration: 2.5s;
-      -webkit-animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-      -moz-animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-      animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-      -webkit-animation-delay: 0;
-      -moz-animation-delay: 0;
-      animation-delay: 0; }
+      -webkit-animation: statsSlide97 1.4s 1 forwards;
+      -moz-animation: statsSlide97 1.4s 1 forwards;
+      animation: statsSlide97 1.4s 1 forwards; }
     #stats .stat-bars .stat-bar-id {
       background-color: rgba(219, 220, 221, 0.6);
       content: '';
       top: 0;
-      width: 95%;
-      -webkit-animation-duration: 2.7s;
-      -moz-animation-duration: 2.7s;
-      animation-duration: 2.7s;
-      -webkit-animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-      -moz-animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-      animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-      -webkit-animation-delay: 0;
-      -moz-animation-delay: 0;
-      animation-delay: 0; }
+      -webkit-animation: statsSlide95 1.4s cubic-bezier(0.65, 0.05, 0.36, 1) 1 forwards;
+      -moz-animation: statsSlide95 1.4s cubic-bezier(0.65, 0.05, 0.36, 1) 1 forwards;
+      animation: statsSlide95 1.4s cubic-bezier(0.65, 0.05, 0.36, 1) 1 forwards; }
     #stats .stat-bars .stat-bar-ps {
       background-color: rgba(219, 220, 221, 0.48);
       content: '';
       top: 0;
       width: 93%;
-      -webkit-animation-duration: 2.9s;
-      -moz-animation-duration: 2.9s;
-      animation-duration: 2.9s;
-      -webkit-animation-timing-function: cubic-bezier(0.6, 0.05, 0.36, 1);
-      -moz-animation-timing-function: cubic-bezier(0.6, 0.05, 0.36, 1);
-      animation-timing-function: cubic-bezier(0.6, 0.05, 0.36, 1);
-      -webkit-animation-delay: 200ms;
-      -moz-animation-delay: 200ms;
-      animation-delay: 200ms; }
+      -webkit-animation: statsSlide93 2.9s cubic-bezier(0.6, 0.05, 0.36, 1);
+      -moz-animation: statsSlide93 2.9s cubic-bezier(0.6, 0.05, 0.36, 1);
+      animation: statsSlide93 2.9s cubic-bezier(0.6, 0.05, 0.36, 1); }
     #stats .stat-bars .stat-bar-ae {
       background-color: rgba(219, 220, 221, 0.2);
       content: '';
       top: 0;
       width: 60%;
-      -webkit-animation-duration: 3.5s;
-      -moz-animation-duration: 3.5s;
-      animation-duration: 3.5s;
-      -webkit-animation-timing-function: ease-in-out;
-      -moz-animation-timing-function: ease-in-out;
-      animation-timing-function: ease-in-out;
-      -webkit-animation-delay: 0;
-      -moz-animation-delay: 0;
-      animation-delay: 0; }
+      -webkit-animation: statsSlide60 3.5s ease-in-out;
+      -moz-animation: statsSlide60 3.5s ease-in-out;
+      animation: statsSlide60 3.5s ease-in-out; }
     #stats .stat-bars .stat-bar-premiere {
       background-color: rgba(219, 220, 221, 0.3);
       content: '';
       top: 0;
       width: 75%;
-      -webkit-animation-duration: 3.1s;
-      -moz-animation-duration: 3.1s;
-      animation-duration: 3.1s;
-      -webkit-animation-timing-function: cubic-bezier(0.5, 0.03, 0.3, 1);
-      -moz-animation-timing-function: cubic-bezier(0.5, 0.03, 0.3, 1);
-      animation-timing-function: cubic-bezier(0.5, 0.03, 0.3, 1);
-      -webkit-animation-delay: 0;
-      -moz-animation-delay: 0;
-      animation-delay: 0; }
+      -webkit-animation: statsSlide75 3.1s cubic-bezier(0.5, 0.03, 0.3, 1);
+      -moz-animation: statsSlide75 3.1s cubic-bezier(0.5, 0.03, 0.3, 1);
+      animation: statsSlide75 3.1s cubic-bezier(0.5, 0.03, 0.3, 1); }
     #stats .stat-bars .stat-bar-mini-css {
       background-color: rgba(219, 220, 221, 0.6);
       content: '';

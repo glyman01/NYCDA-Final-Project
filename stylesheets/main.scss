@@ -273,10 +273,9 @@ html>body .content {
  
   .stat-bars {
     float: right;
-    width: 0;
+    width: 64%;
 
     > div {
-        // @include animation(statsSlide 0.5s linear 1 300ms forwards);
         animation-play-state: paused;
       }
 
@@ -290,30 +289,26 @@ html>body .content {
     .stat-bar-adobe {
       position: relative;
       display: block;
-      width: 99%;
       transform-origin: bottom left;
       height: 30px;
       border-radius: 2px;
       background-color: $cyan;
       bottom: 6px;
+      @include animation(statsSlide99 1.4s 1 forwards)
     }
 
     .stat-bar-fe {
       @extend .stat-bar-adobe;
       background-color: $sweet-green;
-      width: 82%;
       margin-top: 24px;
-      @include animation-duration(0.7s);
-      @include animation-delay(0);
+      @include animation(statsSlide82 1.4s 1 forwards)
     }
 
     .stat-bar-art {
       @extend .stat-bar-adobe;
       background-color: $lte-purple;
       margin-top: 21px;
-      width: 85%;
-      @include animation-duration(1s);
-      @include animation-delay(0);
+      @include animation(statsSlide85 1.4s 1 forwards)
     }
 
     .stat-bar-photog {
@@ -328,8 +323,7 @@ html>body .content {
       @extend .stat-bar-adobe;
       background-color: $sweet-red;
       margin-top: 21px;
-      width: 101%;
-      @include animation-duration(3.4s);
+      @include animation(statsSlide101 3.4s 1 forwards)
     }
 
     .stat-bar-ai {
@@ -339,11 +333,7 @@ html>body .content {
         content: '';
         top: 0;
         margin: 15px 0;
-        width: 97%;
-        @include animation-duration(2.5s);
-        @include animation-timing-function(cubic-bezier(0.65, 0.05, 0.36, 1));
-        @include animation-delay(0);
-    
+        @include animation(statsSlide97 1.4s 1 forwards)
     }
 
     .stat-bar-id {
@@ -351,11 +341,8 @@ html>body .content {
         background-color: rgba($lte-gry, 0.6);
         content: '';
         top: 0;
-        width: 95%;
-        @include animation-duration(2.7s);
-        @include animation-timing-function(cubic-bezier(0.65, 0.05, 0.36, 1));
-        @include animation-delay(0);
-    }
+        @include animation(statsSlide95 1.4s cubic-bezier(0.65, 0.05, 0.36, 1) 1 forwards)
+      }
 
     .stat-bar-ps {
         @extend .stat-bar-ai;
@@ -363,9 +350,7 @@ html>body .content {
         content: '';
         top: 0;
         width: 93%;
-        @include animation-duration(2.9s);
-        @include animation-timing-function(cubic-bezier(0.6, 0.05, 0.36, 1));
-        @include animation-delay(200ms);
+        @include animation(statsSlide93 2.9s cubic-bezier(0.6, 0.05, 0.36, 1));
     }
 
     .stat-bar-ae {
@@ -374,9 +359,7 @@ html>body .content {
         content: '';
         top: 0;
         width: 60%;
-        @include animation-duration(3.5s);
-        @include animation-timing-function(ease-in-out);
-        @include animation-delay(0);
+        @include animation(statsSlide60 3.5s ease-in-out);
     }
 
     .stat-bar-premiere {
@@ -385,9 +368,7 @@ html>body .content {
         content: '';
         top: 0;
         width: 75%;
-        @include animation-duration(3.1s);
-        @include animation-timing-function(cubic-bezier(0.5, 0.03, 0.3, 1));
-        @include animation-delay(0);
+        @include animation(statsSlide75 3.1s cubic-bezier(0.5, 0.03, 0.3, 1));
     }
 
     .stat-bar-mini-css {
