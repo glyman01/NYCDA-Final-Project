@@ -3,20 +3,22 @@ $(document).on('ready', function(){
 	
 	var navHeight = $('.nav-wrapper').outerHeight(true);
 
-	var navClass = $('.nav-main a, .page-nav-svg, .section-btn');
+	var navClass = $('.nav-main a.js-internal, .page-nav-svg, .section-btn');
 
 	// Global scrollTo click event
 
 	// Need to write an if statement that detects class for 'Resume' to remove e.preventDefault();
 
 	navClass.on('click', function(e){
+		var whereToScroll = $(this).attr('href');
+
 		e.preventDefault();
 
 		navClass.removeClass('is-current');
 
 		$(this).addClass('is-current');
 
-		var whereToScroll = $(this).attr('href');
+		
 
 		$.scrollTo(whereToScroll, {
 			duration: 600,
@@ -59,7 +61,12 @@ $(document).on('ready', function(){
 	// Animating on scroll position
 	$('#stats').addClass('hidden-animation').viewportChecker({
         classToAdd: 'animation-begin visible-animation',
-        offset: -100
+        offset: 100
+    });
+
+    $('.stat-bars').viewportChecker({
+        classToAdd: 'is-playing',
+        offset: 100
     });
 
 	// var animateStats = $('.stat-bar-adobe, .stat-bar-ai, .stat-bar-fe, .stat-bar-id, .stat-bar-ps, .stat-bar-premiere, .stat-bar-ae, .stat-bar-mini-css, .stat-bar-mini-wp, .stat-bar-mini-jquery, .stat-bar-mini-sass, .stat-bar-art, .stat-bar-photog, .stat-bar-work');
@@ -83,7 +90,14 @@ $(document).on('ready', function(){
     setTimeout(function(){
 
         $('body').addClass('loaded');
-        $('.wrapper').removeClass('hidden');
+
+        if ($('body').hasClass('loaded')){
+        	$('.wrapper').delay(400).show();
+    	
+    	} else {
+    	
+    		$('.wrapper').hide();
+    	};
     
     }, 4000);
 

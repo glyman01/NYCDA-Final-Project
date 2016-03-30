@@ -71,6 +71,16 @@
     100% {bottom: 4.3%;}    
 }
 
+@keyframes statsSlideParent {
+  from {
+      width: 0%;
+    }
+
+  to {
+    width: 64%;
+  }
+}
+
 @keyframes statsSlide {
 	from {
 	    opacity: 0;
@@ -83,8 +93,14 @@
     opacity: 1;
     -webkit-transform: translateX(-100%, 0, 0);
     transform: translateX(-100%, 0, 0);
+    // end at varying widths
+    // specifying a width here, WORKS.
+    // width: 99%;
   }
 }
+
+
+
 
 @keyframes fadeInDown {
    from {
@@ -110,33 +126,32 @@
   }
 }
 
-@keyframes loadedLeft {
+/*@keyframes loadedLeft {
    from {
-    -webkit-transform: translateX(0%);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(0%);  /* IE 9 */
-    transform: translateX(0%);  /* Firefox 16+, IE 10+, Opera */
-  }
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
 
   to {
-    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(-100%);  /* IE 9 */
-    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
 @keyframes loadedRight {
    from {
-    -webkit-transform: translateX(0%);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(0%);  /* IE 9 */
-    transform: translateX(0%);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
   }
 
   to {
-    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(100%);  /* IE 9 */
-    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
   }
-}
+}*/
 
 @keyframes loadedFade {
    from {
@@ -149,3 +164,26 @@
     visibility: hidden;
   }
 }
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+
+@keyframes type { 
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+} 
