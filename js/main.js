@@ -66,7 +66,7 @@ $(document).on('ready', function(){
 
     $('.stat-bars').viewportChecker({
         classToAdd: 'is-playing',
-        offset: 400
+        offset: 100
     });
 
 	// var animateStats = $('.stat-bar-adobe, .stat-bar-ai, .stat-bar-fe, .stat-bar-id, .stat-bar-ps, .stat-bar-premiere, .stat-bar-ae, .stat-bar-mini-css, .stat-bar-mini-wp, .stat-bar-mini-jquery, .stat-bar-mini-sass, .stat-bar-art, .stat-bar-photog, .stat-bar-work');
@@ -92,35 +92,34 @@ $(document).on('ready', function(){
         $('body').addClass('loaded');
 
         if ($('body').hasClass('loaded')){
-        	$('.wrapper').delay(400).show();
-    	
-    	} else {
-    	
-    		$('.wrapper').hide();
-    	};
+        	$('.wrapper').delay(300).queue(function(next){
+        		$(this).removeClass('hidden-main-content');
+        		next();
+        	});
+    	}
     
-    }, 4000);
+    }, 3200);
 
 
     // Let's get this working
 
     // no scroll
-	function noScroll() {
-		window.scrollTo(0, 0);
-	}
+	// function noScroll() {
+	// 	window.scrollTo(0, 0);
+	// }
 
-    noScroll(function(){
-    	if ($('body').hasClass('.loaded')) {
+ //    noScroll(function(){
+ //    	if ($('body').hasClass('.loaded')) {
 		
-			// enable scrolling
-			window.removeEventListener('scroll', noscroll);
+	// 		// enable scrolling
+	// 		window.removeEventListener('scroll', noscroll);
 		
-		} else {
+	// 	} else {
 		
-			// disable scrolling 
-			window.addEventListener('scroll', noscroll);		
-		};
-    })
+	// 		// disable scrolling 
+	// 		window.addEventListener('scroll', noscroll);		
+	// 	};
+ //    })
 		
 
 }); // end doc on ready

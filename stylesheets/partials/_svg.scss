@@ -75,7 +75,7 @@
 .wave {
 	stroke-dasharray: 220;
 	stroke-dashoffset: 220;
-	@include animation(wavyFill 2.7s linear infinite);
+	@include animation(wavyFill 1.7s linear infinite);
 }
 
 .planet-inner-circle-nav {
