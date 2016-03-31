@@ -101,6 +101,7 @@ $(document).on('ready', function(){
     }, 3200);
 
 
+
     // Let's get this working
 
     // no scroll
@@ -120,6 +121,12 @@ $(document).on('ready', function(){
 	// 		window.addEventListener('scroll', noscroll);		
 	// 	};
  //    })
+
+ 	// Setting Cookies to clear the pre-loader
+ 	// if ($.cookie('loaded') == null)
+  //       $.cookie("loaded", "yearly");
+  //   else
+  //       $("#loader-wrapper").hide();
 		
 
 }); // end doc on ready

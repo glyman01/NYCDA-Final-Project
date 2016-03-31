@@ -403,7 +403,7 @@ html>body .content {
   }
 
   .headline-about {
-    color: rgba($sweet-red, 0.9);
+    color: rgba(white, 0.24);
     word-wrap: break-word;
     font-family: $arvo;
     font-weight: 700;
@@ -472,6 +472,7 @@ html>body .content {
     color: white;
     font-size: 3.4em;
     opacity: 0;
+    background-color: rgba(black, 0.6);
     @include animation(fadeInDown 1s 2400ms ease-in-out 1 forwards);
   }
 
