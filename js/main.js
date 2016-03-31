@@ -1,5 +1,18 @@
 // DOM
 $(document).on('ready', function(){
+
+	// Interesting... cookies don't work locally - FTW!
+	function svgLoadCookie(){
+		if (!$.cookie('loaded')){
+			Cookies.set('loaded', {expires: 1});
+			console.log('is this cookie setting');
+		}
+		// } else {
+
+		// 	// $("#loader-wrapper").hide();
+		//   console.log('loading NASA APOD Image');
+		// }	
+	};
 	
 	// initializing swiper
 	
@@ -157,46 +170,5 @@ $(document).on('ready', function(){
     
     });
 
-
-    // Let's get this working
-
-    // no scroll
-	// function noScroll() {
-	// 	window.scrollTo(0, 0);
-	// }
-
- //    noScroll(function(){
- //    	if ($('body').hasClass('.loaded')) {
-		
-	// 		// enable scrolling
-	// 		window.removeEventListener('scroll', noscroll);
-		
-	// 	} else {
-		
-	// 		// disable scrolling 
-	// 		window.addEventListener('scroll', noscroll);		
-	// 	};
- //    })
-
-	// Setting Cookies to clear the pre-loader
-	// if ($.cookie('loaded') == null)
-	// 	$.cookie("loaded", "daily");
-	// 		console.log('is this cookie setting');
-	// else
-	// 	$("#loader-wrapper").hide();
-
-	// Interesting... cookies don't work locally - FTW!
-	function svgLoadCookie(){
-		if ($.cookie('loaded') === null){
-			Cookies.set('loaded', '0', {expires: 1});
-			console.log('is this cookie setting');
-
-		} else {
-
-			$("#loader-wrapper").hide();
-		    	// console.log('loading NASA APOD Image');
-		}	
-	};
-		
 
 }); // end doc on ready

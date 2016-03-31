@@ -1,0 +1,21 @@
+{
+  "name": "NYCDA-Final-Project",
+  "version": "1.0.0",
+  "description": "Gulp for minification",
+  "main": "index.html",
+  "author": "Geoffrey T. Lyman",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glyman01/NYCDA-Final-Project.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-minify": "0.0.7",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5"
+  }
+}
