@@ -12,6 +12,8 @@
 @import 'partials/borders';
 @import 'partials/svg';
 @import 'partials/animations';
+@import 'partials/swiper';
+
 
 body {
 
@@ -671,25 +673,35 @@ html>body .content {
 
 // Work Section
 
-#Work {
-  .slide-details {
+.slide-details {
     font-family: $arvo;
-    font-size: 14px;
+    font-size: 18px;
     color: $mint;
   }
 
-  .slide-title {
-    font-size: 30px;
+.slide-title {
+    font-size: 36px;
     line-height: 1.5em;
     font-family: $default-font;
     font-weight: 700;
     text-transform: uppercase;
     color: white;
-  }
+    margin-bottom: 30px;
+}
 
+.swiper-container {
+        max-width: 930px;
+        width: 100%;
+        max-height: 600px;
+        height: 100%;
+
+    img {
+      border-radius: 10px;
+    }
 }
 
 // Page Wrap
+
 .page-wrap {
   margin-bottom:0px;
   min-height: 0px;
@@ -697,27 +709,33 @@ html>body .content {
   @include breakpoint(small){
     min-height: 100%;
     /* equal to footer height */
-    margin-bottom: -auto;
-  }
- 
+    margin-bottom: -60px;
+  } 
+
   &:after {
     content: "";
     display: block;
   }
 }
 
-.site-footer {
-
-}
-
 .site-footer, .page-wrap:after {
   height: auto;
 
   @include breakpoint(small){
-    height: auto;
+    height: 60px; 
   }
 }
 
+.site-footer {
+}
+
+.me-likey {
+  font-family: $arvo;
+  font-weight: 700;
+  font-size: 21px;
+  color: rgba(white, 0.4);
+  margin-top: 30px;
+}
 
 footer {
   background-color: $drk-gry;

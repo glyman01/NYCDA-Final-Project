@@ -1,6 +1,28 @@
 // DOM
 $(document).on('ready', function(){
 	
+	// initializing swiper
+	
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        // slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
+	});
+
+    var swiperV = new Swiper('.swiper-container-v', {
+        pagination: '.swiper-pagination-v',
+        paginationClickable: true,
+        direction: 'vertical',
+        spaceBetween: 30,
+        // slidesPerView: 1,
+        loop: true
+    });
+
+
 	var navHeight = $('.nav-wrapper').outerHeight(true);
 
 	var navClass = $('.nav-main a.js-internal, .page-nav-svg, .js-section-btn');

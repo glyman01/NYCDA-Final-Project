@@ -34,6 +34,7 @@
 .section-btn-green {
 	@extend .section-btn;
 	background-color: rgba($mint, 0.4);
+	margin-top: 32px;
 
 	&:hover{
 		background-color: rgba($mint, 0.7);
