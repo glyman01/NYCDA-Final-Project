@@ -19,7 +19,15 @@
 
 .block-center-spaced {
 	@extend .block-center;
-	margin: 22px auto 20px;
+	margin: 40px auto 30px;
+
+	@include breakpoint(small){
+		margin: 20px auto 60px;
+	}
+	
+	@include breakpoint(large){
+		margin: 20px auto 60px;
+	}
 }
 
 .overflow {

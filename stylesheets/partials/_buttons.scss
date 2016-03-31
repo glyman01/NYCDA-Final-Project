@@ -30,3 +30,20 @@
     	outline-offset: 14px;
 	}
 }
+
+.section-btn-green {
+	@extend .section-btn;
+	background-color: rgba($mint, 0.4);
+
+	&:hover{
+		background-color: rgba($mint, 0.7);
+		color: white;
+	}
+
+	&:focus{
+		@extend .section-btn-green:hover;
+		color: white;
+		outline: dotted rgba($sweet-red, 0.8);
+    	outline-offset: 14px;
+	}
+}

@@ -27,6 +27,9 @@ body {
 
 	@include breakpoint(med) {
 	}
+
+  @include breakpoint(large) {
+  }
 }
 
 html,body {
@@ -147,19 +150,26 @@ html>body .content {
 }
 
 .sub-head-about {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 21px;
-  margin: 0;
-  letter-spacing: .05em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 21px;
+    margin: 0;
+    letter-spacing: .05em;
+  }
+
+#About {
+
+  .headline-about {
+    
+    &:before {
+      display: block;
+      margin-top: 20px;
+      content: '';
+    }
+  }
 }
 
 .headline-about {
-  &:before {
-    display: block;
-    margin-top: 20px;
-    content: '';
-  }
 
   @extend .sub-head;
   font-weight: bolder;
@@ -256,7 +266,11 @@ html>body .content {
  
   .stat-bars {
     float: right;
-    width: 64%;
+    width: 0%;
+
+    &.is-playing {
+      width: 64%;
+    }
 
     > div {
         animation-play-state: paused !important;
@@ -392,29 +406,21 @@ html>body .content {
 
 #Contact {
 
-  .center-absolute {
-    margin-top: 50%;
-    
-    @include breakpoint(small){
-      position: absolute;
-      margin-top: 45%;
-      transform: translateY(-50%);
-    }
-  }
-
   .headline-about {
-    color: rgba(white, 0.24);
+    color: rgba($sweet-red, 0.34);
     word-wrap: break-word;
     font-family: $arvo;
     font-weight: 700;
     text-rendering: optimizeLegibility;
     font-size: 4em;
-    @include animation(fadeInDown 1.6s ease 1 forwards);
+    @include animation(fadeInDown 1s cubic-bezier(.65, 0.4, 1, 0.4) 1 forwards);
     transform: translateY(-50%);
+    padding: 150px 30px;
     position: relative;
 
     @include breakpoint(small){
       font-size: 6em;
+      padding: 240px 30px;
     }
   }
 }
@@ -423,10 +429,8 @@ html>body .content {
   
   #container {
     text-align: center;
-    margin: 40px auto;
+    margin: 80px auto;
   }
-
-  padding: 80px 0;
 
   .loading-ellipses {
 
@@ -444,7 +448,9 @@ html>body .content {
   .block-center {
   }
   .sub-head-about {
-    @include animation(fadeInDown .4s 100ms ease-in-out 1 forwards);
+    color: $drk-gry;
+    opacity: 0;
+    @include animation(fadeInDown 1s 1000ms ease-in-out 1 forwards);
   }
 
   .headline-about {
@@ -455,55 +461,138 @@ html>body .content {
     transform-origin: 0% 0%;
     text-align: center;
     opacity: 0;
-    @include animation(fadeInDown .8s 1000ms ease-in-out 1 forwards);
+    color: $lte-purple;
+    font-family: $arvo;
+    font-weight: 400;
+    @include animation(fadeInDown .8s 1700ms ease-in-out 1 forwards);
+
+    &:before {
+      margin: 0 !important;
+    }
 
     @include breakpoint(med) {
       line-height: 1.4em;
       white-space: nowrap;
-      @include animation(type 1s 2s steps(60, end) 1 forwards);
+      @include animation(type 1.5s 2s steps(60, end) 1 forwards);
+    }
+  }
+
+  .float-contain {
+    max-width: 960px;
+    margin: 20px auto 0px;
+    text-align: center;
+    display: block;
+    width: 100%;
+
+    &:after {
+      clear: both;
+      float: none;
     }
   }
 
   .icon {
-    height: 120px;
-    width: 120px;
+    position: relative;
+    height: 90px;
+    width: 91px;
+    display: inline-block;
+    margin: 18px;
     border-radius: 50%;
-    line-height: 120px;
+    line-height: 90px;
     color: white;
-    font-size: 3.4em;
+    font-size: 2.4em;
     opacity: 0;
     background-color: rgba(black, 0.6);
-    @include animation(fadeInDown 1s 2400ms ease-in-out 1 forwards);
+    @include animation(fadeInDown 1s 2700ms ease-in-out 1 forwards);
+
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+
+    @include breakpoint(med){
+      height: 120px;
+      width: 121px;
+      line-height: 120px;
+      font-size: 3.4em;
+      margin: 30px;
+    }
+
+    &:focus:before, &:hover:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -7.5%;
+      left: -7.5%;
+      border-radius: 50%;
+      border: solid 1px #DBDCDD;
+      width: 115%;
+      z-index: 10;
+      height: 115%;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline-color: -webkit-focus-ring-color;
+      outline-style: none;
+      outline-width: 0;
+    }
   }
 
   .linked-in {
     @extend .icon;
-    background-color: $in;
+    background-color: rgba($in, .8);
+
+    &:hover {
+      background-color: rgba($in, 1);
+      text-decoration: none;
+    }
   }
 
   .facebook {
     @extend .icon;
-    background-color: $fb;
+      background-color: rgba($fb, .8);
+
+    &:hover {
+      background-color: rgba($fb, 1);
+    }
   }
 
   .twitter {
     @extend .icon;
-    background-color: $cyan;
+      background-color: rgba($cyan, .8);
+
+    &:hover {
+      background-color: rgba($cyan, 1);
+    }
   }
 
   .email {
     @extend .icon;
-    background-color: $sweet-red;
+      background-color: rgba($sweet-red, 0.8);
+
+    &:hover {
+      background-color: rgba($sweet-red, 1);
+    }
   }
   
   .phone {
     @extend .icon;
-    background-color: $drk-gry;
+      background-color: rgba($drk-gry, 0.8);
+
+    &:hover {
+      background-color: rgba($drk-gry, 1);
+    }
   }
 
 }
 
 /* Tool Tips */
+
+.tool-tip {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    float: left;
+  }
 
 [data-tips] {
   position: relative;
@@ -514,9 +603,11 @@ html>body .content {
 
 
     &:after, &:before {
-      position: absolute;
       z-index: 100;
       opacity: 0;
+      -webkit-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out;
+      -moz-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out;
+      transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out;
     }
 
     &:after {
@@ -535,15 +626,14 @@ html>body .content {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      margin-top: 20px;
-      right: -143px;
-      position: absolute;
+      position: relative;
+      bottom: 12px;
     }
 
     &:before {
       position: absolute;
-      left: -13px;
-      bottom: -145px;
+      left: 79px;
+      bottom: 31px;
       height: 16px;
       color: $drk-gry;
       font-size: 36px;
@@ -579,6 +669,54 @@ html>body .content {
     }
 }
 
+// Work Section
+
+#Work {
+  .slide-details {
+    font-family: $arvo;
+    font-size: 14px;
+    color: $mint;
+  }
+
+  .slide-title {
+    font-size: 30px;
+    line-height: 1.5em;
+    font-family: $default-font;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+  }
+
+}
+
+// Page Wrap
+.page-wrap {
+  margin-bottom:0px;
+  min-height: 0px;
+
+  @include breakpoint(small){
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -auto;
+  }
+ 
+  &:after {
+    content: "";
+    display: block;
+  }
+}
+
+.site-footer {
+
+}
+
+.site-footer, .page-wrap:after {
+  height: auto;
+
+  @include breakpoint(small){
+    height: auto;
+  }
+}
 
 
 footer {

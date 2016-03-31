@@ -8,11 +8,22 @@
 .block-hero-purple {
 	@extend .block-hero;
 	background-color: $drk-purple;
-	padding: 180px 0 50px 0;
+	padding: 120px 0 50px 0;
+	height: auto;
+
+	@include breakpoint(mini){
+		padding: 150px 0 50px 0;
+		height: 100%;
+	}
+
+	@include breakpoint(small){
+		padding: 200px 0 20px 0;
+		height: auto;
+	}
 }
 
 .block-hero-green {
-	@extend .block-hero;
+	@extend .block-hero-purple;
 	background-color: $sweet-green;
 }
 
@@ -22,10 +33,17 @@
 }
 
 %block-hero-nasa {
-	height: 500px;
-	max-height: 500px;
+	height: 350px;
+	max-height: 350px;
+	min-height: 350px;
 	width: 100%;
 	padding: 0;
+
+	@include breakpoint(small){
+		height: 500px;
+		max-height: 500px;
+		min-height: 500px;
+	}
 }
 
 .block-nasa {
