@@ -20,6 +20,7 @@ body {
 	font-family: $default-font;
   min-width: 320px;
   width: 100%;
+  overflow-x: hidden;
 
 	@include breakpoint(mini) {
   }
@@ -113,7 +114,6 @@ html>body .content {
       -webkit-transform: scale(0);
           -ms-transform: scale(0);
               transform: scale(0);
-              border-radius: 100%;
 
       -webkit-transition: all 0.7s 400ms ease-in-out;  
               transition: all 0.7s 400ms ease-in-out;
@@ -706,12 +706,12 @@ html>body .content {
         width: 100%;
         max-height: 600px;
         height: 600px;
-        overflow-y: hidden;
+        overflow: hidden;
 
    img {
-    border-radius: 100%;
-    width: 400px;
-    height: 400px;
+/*    border-radius: 100%;
+    width: 500px;
+*/    height: 500px;
     display: block;
     margin: 0px auto;
   }
@@ -760,7 +760,7 @@ html>body .content {
   font-weight: 700;
   font-size: 21px;
   color: rgba(white, 0.4);
-  margin: 40px auto 0;
+  margin: 70px auto 0;
 }
 
 .floated-btn {
@@ -799,5 +799,7 @@ footer {
 }
 
 .hidden-main-content {
-  display: none;
+  // display: none;
+  overflow: hidden;
+  visibility: hidden;
 }
