@@ -1,18 +1,38 @@
 // DOM
 $(document).on('ready', function(){
 
-	// Interesting... cookies don't work locally - FTW!
-	function svgLoadCookie(){
-		if (!$.cookie('loaded')){
-			Cookies.set('loaded', {expires: 1});
-			console.log('is this cookie setting');
-		}
-		// } else {
 
-		// 	// $("#loader-wrapper").hide();
+		// Faking the animation intro
+    var introAnimate = setTimeout(function(){
+
+        $('body').addClass('loaded');
+
+        if ($('body').hasClass('loaded')){
+        	$('.wrapper').delay(300).queue(function(next){
+        		$(this).removeClass('hidden-main-content');
+        		next();
+        	});
+    	}
+    
+    }, 3400);
+	
+	// Interesting... cookies don't work locally - FTW!
+	
+	function svgLoadCookie(){
+		
+		if (!Cookies.get('loaded')){
+			Cookies.set('loaded', 'true', {expires: 1});
+			// console.log('is this cookie setting');
+			$("#loader-wrapper").hide();
+		
+		} else {
+			clearInterval(introAnimate);
 		//   console.log('loading NASA APOD Image');
-		// }	
+		}	
 	};
+
+	svgLoadCookie();
+
 	
 	// initializing swiper
 	
@@ -142,22 +162,6 @@ $(document).on('ready', function(){
         classToRemove: 'start-svg-animate',
         offset: 400
     });
-
-
-    
-    // Faking the animation intro
-    setTimeout(function(){
-
-        $('body').addClass('loaded');
-
-        if ($('body').hasClass('loaded')){
-        	$('.wrapper').delay(300).queue(function(next){
-        		$(this).removeClass('hidden-main-content');
-        		next();
-        	});
-    	}
-    
-    }, 2900);
 
 
     // Delaying the stat bar animation
