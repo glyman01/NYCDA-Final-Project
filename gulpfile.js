@@ -9,9 +9,9 @@ var minify = require('gulp-minify');
 var reload = browserSync.reload;
 
 gulp.task('sass', function(){
-	gulp.src('stylesheets/scss/main.scss')
+	gulp.src('stylesheets/main.scss')
 		.pipe(sass({
-			includePaths: ['stylesheets/scss'],
+			includePaths: ['stylesheets/'],
 			outputStyle: 'expanded'
 		}))
 		.pipe(gulp.dest('stylesheets/.'));
@@ -27,7 +27,7 @@ gulp.task('serve', function(){
 
 // Combine multiple tasks into one
 gulp.task('watch', ['sass', 'serve'], function(){
-	gulp.watch(['stylesheets/scss/*.scss'], ['sass']);
+	gulp.watch(['stylesheets/*.scss'], ['sass']);
 });
 
 
@@ -35,21 +35,21 @@ gulp.task('watch', ['sass', 'serve'], function(){
 	- Compile SASS, compressed (single line)
 	- Replace image paths with production ready versions
 */
-gulp.task('buildcss', function(){
-	gulp.src('stylesheets/scss/main.scss')
-		.pipe(sass({
-			includePaths: ['stylesheets/scss'],
-			outputStyle: 'compressed'
-		}))
-		.pipe(gulp.dest('build/.'));
-});
+// gulp.task('buildcss', function(){
+// 	gulp.src('stylesheets/scss/main.scss')
+// 		.pipe(sass({
+// 			includePaths: ['stylesheets/scss'],
+// 			outputStyle: 'compressed'
+// 		}))
+// 		.pipe(gulp.dest('build/.'));
+// });
 
-gulp.task('default', function () {
-	gulp.src('src/**/*.css')
-		.pipe(cssmin())
-		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('dist'));
-});
+// gulp.task('default', function () {
+// 	gulp.src('src/**/*.css')
+// 		.pipe(cssmin())
+// 		.pipe(rename({suffix: '.min'}))
+// 		.pipe(gulp.dest('dist'));
+// });
 
 
 // var gulp = require('gulp');

@@ -2,32 +2,38 @@
 $(document).on('ready', function(){
 
 
-		// Faking the animation intro
-    var introAnimate = setTimeout(function(){
-
-        $('body').addClass('loaded');
-
-        if ($('body').hasClass('loaded')){
-        	$('.wrapper').delay(300).queue(function(next){
-        		$(this).removeClass('hidden-main-content');
-        		next();
-        	});
-    	}
-    
-    }, 3400);
 	
 	// Interesting... cookies don't work locally - FTW!
 	
 	function svgLoadCookie(){
-		
+		// if the cookie 'loaded' does not exist, do this -
 		if (!Cookies.get('loaded')){
-			Cookies.set('loaded', 'true', {expires: 1});
+			Cookies.set('loaded', 'true', {expires: ''});
 			// console.log('is this cookie setting');
-			$("#loader-wrapper").hide();
+		
+		// Faking the animation intro
+		    var introAnimate = setTimeout(function(){
+
+		        $('body').addClass('loaded');
+
+		        if ($('body').hasClass('loaded')){
+		        	$('.wrapper').delay(300).queue(function(next){
+		        		$(this).removeClass('hidden-main-content');
+		        		next();
+		        	});
+		    	}
+		    
+		    }, 3400);
+
+
+		// otherwise do this -
 		
 		} else {
-			clearInterval(introAnimate);
-		//   console.log('loading NASA APOD Image');
+			
+			$('body').addClass('loaded');
+
+		       $('.wrapper').removeClass('hidden-main-content');
+		       $('#loader-wrapper').hide();
 		}	
 	};
 
@@ -172,14 +178,48 @@ $(document).on('ready', function(){
 			offset: 100
 		});
 
-			if ($('.stat-bars').hasClass('is-playing')){
-				$('.stat-bars').delay(300).queue(function(next){
-					$(this).addClass('hidden-main-content');
-		   		next();
-		   	});
+			// if screen comes into view do this
+			if ($('.stat-bars').hasClass('hidden-main-content')){
+				$('.stat-bars').delay(200).queue(function(next){
+					$(this).removeClass('hidden-main-content');
+		   			next();
+		   		})
+
+			// otherwise, if screen is already in view, do this
+
+			} else {
+
+				$('.stat-bars').addClass('is-playing');
+				$('.stat-bars').removeClass('hidden-main-content');
+
 			}
     
-    });
+    }, 1200);
+
+    //  setTimeout(function(){
+
+			// var statAnimate = function(){
+			// 	$('.stat-bars').viewportChecker({
+			// 	classToRemove: 'hidden-main-content',
+			// 	offset: 100
+			// });
+
+			// // if screen comes into view do this
+			// if ($('.stat-bars').hasClass('hidden-main-content')){
+			// 	// $('.stat-bars').delay(200).queue(function(next){
+			// 		$(this).removeClass('hidden-main-content');
+		 //   			// next();
+		 //   		// })
+
+			// // otherwise, if screen is already in view, do this
+
+			// } else {
+
+			// 	$('.stat-bars').addClass('is-playing');
+
+			// }
+    
+   //  }, 1200);
 
 
 }); // end doc on ready
