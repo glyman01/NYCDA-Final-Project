@@ -2,14 +2,14 @@
 $(document).on('ready', function(){
 
 
-	
-	// Interesting... cookies don't work locally - FTW!
+	// Setting a cookie for the intro loader
 	
 	function svgLoadCookie(){
+		
 		// if the cookie 'loaded' does not exist, do this -
+		
 		if (!Cookies.get('loaded')){
 			Cookies.set('loaded', 'true', {expires: ''});
-			// console.log('is this cookie setting');
 		
 		// Faking the animation intro
 		    var introAnimate = setTimeout(function(){
@@ -26,7 +26,7 @@ $(document).on('ready', function(){
 		    }, 3400);
 
 
-		// otherwise do this -
+		// otherwise, if the cookie exists do this -
 		
 		} else {
 			
@@ -41,26 +41,7 @@ $(document).on('ready', function(){
 
 	
 	// initializing swiper
-	
-	// var swiper = new Swiper('.swiper-container', {
- //        pagination: '.swiper-pagination',
- //        nextButton: '.swiper-button-next',
- //        prevButton: '.swiper-button-prev',
- //        slidesPerView: 1,
- //        paginationClickable: true,
- //        spaceBetween: 30,
- //        loop: true
-	// });
-
-    // var swiperV = new Swiper('.swiper-container-v', {
-    //     pagination: '.swiper-pagination-v',
-    //     paginationClickable: true,
-    //     direction: 'vertical',
-    //     spaceBetween: 30,
-    //     // slidesPerView: 1,
-    //     loop: true
-    // });
-
+    // Swiper Slider
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -69,13 +50,13 @@ $(document).on('ready', function(){
         loop: true
     });
 
+    // Nav ScrollTo
+
 	var navHeight = $('.nav-wrapper').outerHeight(true);
 
 	var navClass = $('.nav-main a.js-internal, .page-nav-svg, .js-section-btn');
 
 	// Global scrollTo click event
-
-	// Need to write an if statement that detects class for 'Resume' to remove e.preventDefault();
 
 	navClass.on('click', function(e){
 		var whereToScroll = $(this).attr('href');
@@ -125,20 +106,12 @@ $(document).on('ready', function(){
 	function handleResult(result){
 		if(result.media_type == "video") {
 
-			// display none added to the image id
-			// $("#apod_img_id").css("display", "none");
-
 			// we want to insert a fallback image url when a video is detected
 			$('.block-nasa').css('background', 'url(' + fallbackImageUrl + ') top center no-repeat');
-				// console.log('should be loading the fallback image');
-
-			// video url embedded
-			// $("#apod_vid_id").attr("src", result.url);
 
 		} else {
 
 		    $('.block-nasa').css('background', 'url(' + result.url + ') top center no-repeat');
-		    	// console.log('loading NASA APOD Image');
 		}	
 	}
 
@@ -149,77 +122,88 @@ $(document).on('ready', function(){
         offset: 100
     });
 
-    // $('.stat-bars').viewportChecker({
-    //     classToAdd: 'is-playing',
-    //     offset: 100
-    // });
-
-	// var animateStats = $('.stat-bar-adobe, .stat-bar-ai, .stat-bar-fe, .stat-bar-id, .stat-bar-ps, .stat-bar-premiere, .stat-bar-ae, .stat-bar-mini-css, .stat-bar-mini-wp, .stat-bar-mini-jquery, .stat-bar-mini-sass, .stat-bar-art, .stat-bar-photog, .stat-bar-work');
-	// // var animateStats = $('.stat-bars');
-    
- //    animateStats.addClass('stat-bar-animate').viewportChecker({
- //        classToAdd: animateStats,
- //        classToRemove: 'stat-bar-animate',
- //        offset: 180
- //    });
-
     $('#page-nav').addClass('start-svg-animate').viewportChecker({
         classToAdd: 'stop-svg-animate',
         classToRemove: 'start-svg-animate',
         offset: 400
     });
 
+	// Delaying the stat bar animation - this works, but needs improvement		
+	function animateStats(){
 
-    // Delaying the stat bar animation
-    setTimeout(function(){
-
-		$('.stat-bars').viewportChecker({
-			classToAdd: 'is-playing',
-			offset: 100
-		});
+		// if class .stat-bars has class .hidden-main-content, do this
+		if ($('#animate-stats').hasClass('stat-bars')){
 
 			// if screen comes into view do this
-			if ($('.stat-bars').hasClass('hidden-main-content')){
-				$('.stat-bars').delay(200).queue(function(next){
-					$(this).removeClass('hidden-main-content');
-		   			next();
-		   		})
+			var statAnimate = setTimeout(function(){
 
-			// otherwise, if screen is already in view, do this
+				// this sets the class to js-animate on scroll
+				$('.stat-bars').addClass('hidden-main-content').viewportChecker({
+					classToAdd: 'js-animate',
+					classToRemove: 'hidden-main-content',
+					offset: 400
+				});
 
-			} else {
+				// This runs if screen is in view
 
-				$('.stat-bars').addClass('is-playing');
-				$('.stat-bars').removeClass('hidden-main-content');
+				if ($('.stat-bars').hasClass('js-animate')){
+						
+					$('.stat-bars').delay(400).queue(function(next){
+						$(this).addClass('is-playing');
+						next();
+					});
+				}
 
-			}
+			});
+		}
+	};
+
+	// Delaying the stat bar animation - this works, but needs improvement		
+	function statsEngage(){
+
+		// if class .stat-bars has class .hidden-main-content, do this
+		if (!$('.stat-bars').hasClass('hidden-main-content')){
+						
+			// if screen comes into view do this
+			var statEngage = setTimeout(function(){
+
+				// this sets the class to js-animate on scroll
+				$('.stat-bars').addClass('hidden-main-content').viewportChecker({
+					classToAdd: 'js-animate',
+					classToRemove: 'hidden-main-content',
+					offset: 400
+				});
+
+				// This runs if screen is in view
+
+				if ($('.stat-bars').hasClass('js-animate')){
+						
+					$('.stat-bars').delay(400).queue(function(next){
+						$(this).addClass('is-playing');
+						next();
+					});
+				}
+
+			});
+		}
+
+	};
+
+
+	statsEngage();
+	animateStats();
+
     
-    }, 1200);
 
-    //  setTimeout(function(){
+    // Updating Footer Copyright Year
+    var updateYear = function(){
+    	
+    	$('.footerYear').html(new Date().getFullYear());
+	
+	};
 
-			// var statAnimate = function(){
-			// 	$('.stat-bars').viewportChecker({
-			// 	classToRemove: 'hidden-main-content',
-			// 	offset: 100
-			// });
+	updateYear();
 
-			// // if screen comes into view do this
-			// if ($('.stat-bars').hasClass('hidden-main-content')){
-			// 	// $('.stat-bars').delay(200).queue(function(next){
-			// 		$(this).removeClass('hidden-main-content');
-		 //   			// next();
-		 //   		// })
-
-			// // otherwise, if screen is already in view, do this
-
-			// } else {
-
-			// 	$('.stat-bars').addClass('is-playing');
-
-			// }
-    
-   //  }, 1200);
 
 
 }); // end doc on ready
