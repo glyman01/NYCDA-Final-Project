@@ -128,69 +128,114 @@ $(document).on('ready', function(){
         offset: 400
     });
 
+    // $('.stat-bars').addClass('hidden-main-content').viewportChecker({
+    //     classToAdd: 'is-playing',
+    //     classToRemove: 'hidden-main-content',
+    //     offset: 400
+    // });
+
 	// Delaying the stat bar animation - this works, but needs improvement		
 	function animateStats(){
 
+		$('.stat-bars').addClass('hidden-main-content').viewportChecker({
+	        classToAdd: 'is-playing',
+	        classToRemove: 'hidden-main-content',
+	        offset: 400
+	    });
+
 		// if class .stat-bars has class .hidden-main-content, do this
-		if ($('#animate-stats').hasClass('stat-bars')){
+		if (!$('.stat-bars').hasClass('hidden-main-content')){
 
 			// if screen comes into view do this
 			var statAnimate = setTimeout(function(){
 
 				// this sets the class to js-animate on scroll
-				$('.stat-bars').addClass('hidden-main-content').viewportChecker({
+				$('.stat-bars').viewportChecker({
 					classToAdd: 'js-animate',
-					classToRemove: 'hidden-main-content',
 					offset: 400
+				});
+				
+
+				$('.stat-bars').delay(1500).queue(function(next){
+					$(this).addClass('is-playing');
+					next();
 				});
 
 				// This runs if screen is in view
 
-				if ($('.stat-bars').hasClass('js-animate')){
+				if ($('#animate-stats').hasClass('js-animate')){
 						
-					$('.stat-bars').delay(400).queue(function(next){
+					$('.stat-bars').delay(2000).queue(function(next){
+						$(this).removeClass('hidden-main-content');
+						next();
+					});
+
+					$('.stat-bars').delay(1500).queue(function(next){
 						$(this).addClass('is-playing');
 						next();
 					});
 				}
 
 			});
-		}
+
+		} 
+
+		// else {
+
+		// 		var statEngage = setTimeout(function(){
+
+		// 			// this sets the class to js-animate on scroll
+		// 			$('.stat-bars').viewportChecker({
+		// 				classToAdd: 'is-playing',
+		// 				offset: 400
+		// 			});
+
+		// 			// This runs if screen is in view
+
+		// 			// if (!$('.stat-bars').hasClass('is-playing')){
+							
+		// 			// 	$('.stat-bars').delay(100).queue(function(next){
+		// 			// 		$(this).addClass('is-playing');
+		// 			// 		next();
+		// 			// 	});
+		// 			// }
+
+		// 		});
+		// 	}
 	};
 
 	// Delaying the stat bar animation - this works, but needs improvement		
-	function statsEngage(){
+	// function statsEngage(){
 
-		// if class .stat-bars has class .hidden-main-content, do this
-		if (!$('.stat-bars').hasClass('hidden-main-content')){
+	// 	// if class .stat-bars has class .hidden-main-content, do this
+	// 	if ($('.stat-bars').hasClass('engage')){
 						
-			// if screen comes into view do this
-			var statEngage = setTimeout(function(){
+	// 		// if screen comes into view do this
+	// 		var statEngage = setTimeout(function(){
 
-				// this sets the class to js-animate on scroll
-				$('.stat-bars').addClass('hidden-main-content').viewportChecker({
-					classToAdd: 'js-animate',
-					classToRemove: 'hidden-main-content',
-					offset: 400
-				});
+	// 			// this sets the class to js-animate on scroll
+	// 			$('.stat-bars').viewportChecker({
+	// 				classToRemove: 'hidden-main-content',
+	// 				offset: 400
+	// 			});
 
-				// This runs if screen is in view
+	// 			// This runs if screen is in view
 
-				if ($('.stat-bars').hasClass('js-animate')){
+	// 			if (!$('.stat-bars').hasClass('is-playing')){
 						
-					$('.stat-bars').delay(400).queue(function(next){
-						$(this).addClass('is-playing');
-						next();
-					});
-				}
+	// 				$('.stat-bars').delay(100).queue(function(next){
+	// 					$(this).addClass('is-playing');
+	// 					next();
+	// 				});
+	// 			}
 
-			});
-		}
+	// 		});
+	// 	}
 
-	};
+	// };
 
 
-	statsEngage();
+	// statsEngage();
 	animateStats();
 
     
