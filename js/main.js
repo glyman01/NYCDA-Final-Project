@@ -17,7 +17,7 @@ $(document).on('ready', function(){
 		        $('body').addClass('loaded');
 
 		        if ($('body').hasClass('loaded')){
-		        	$('.wrapper').delay(300).queue(function(next){
+		        	$('.wrapper').delay(0).queue(function(next){
 		        		$(this).removeClass('hidden-main-content');
 		        		next();
 		        	});

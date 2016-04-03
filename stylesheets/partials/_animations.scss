@@ -122,17 +122,6 @@
   }
 }*/
 
-@keyframes loadedFade {
-   from {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 
 @keyframes ellipsis {
   to {
@@ -156,3 +145,26 @@
     opacity: 1;
   }
 } 
+
+@keyframes loadedFade {
+   0% {
+    visibility: visible;
+    transform: scale(1, 1);
+    border-radius: 0%;
+  }
+
+  33% {
+    transform: scale(.5, .75);
+  }
+
+  66% {
+    transform: scale(.25, .5);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0, 0);
+    border-radius: 100%;
+  }
+}
