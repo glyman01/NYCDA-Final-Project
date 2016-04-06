@@ -4024,6 +4024,84 @@ html > body .content {
     height: 600px;
     background-blend-mode: multiply; }
 
+.media {
+  display: inline-block;
+  position: relative;
+  vertical-align: top; }
+  .media .media__image {
+    display: block; }
+  .media .media__body {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    color: white;
+    left: 25%;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    right: 0;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    box-shadow: 0px 0px 78px 70px rgba(0, 0, 0, 0.6);
+    height: 50%;
+    width: 50%;
+    border-radius: 5px; }
+  .media .media__body:hover {
+    opacity: 1; }
+  .media .media__body:after,
+  .media .media__body:before {
+    bottom: 1em;
+    content: '';
+    left: 1em;
+    opacity: 0;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: 0.6s 0.2s;
+    transition: 0.6s 0.2s; }
+  .media .media__body:before {
+    border-bottom: none;
+    border-top: none;
+    left: 2em;
+    right: 2em; }
+  .media .media__body:after {
+    border-left: none;
+    border-right: none;
+    bottom: 2em;
+    top: 2em; }
+  .media .media__body:hover:after,
+  .media .media__body:hover:before {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    cursor: pointer; }
+  .media .text-contain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; }
+  .media .media__body .icon, .media .media__body #Communication .linked-in, #Communication .media .media__body .linked-in, .media .media__body #Communication .facebook, #Communication .media .media__body .facebook, .media .media__body #Communication .twitter, #Communication .media .media__body .twitter, .media .media__body #Communication .email, #Communication .media .media__body .email, .media .media__body #Communication .phone, #Communication .media .media__body .phone {
+    background-color: rgba(72, 145, 121, 0.75);
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    line-height: 80px;
+    text-align: center;
+    font-size: 36px; }
+  .media .media__body h1 {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white; }
+  .media .media__body p {
+    margin-top: 40px; }
+
 .page-wrap {
   margin-bottom: 0px;
   min-height: 0px; }
