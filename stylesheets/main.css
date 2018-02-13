@@ -203,144 +203,144 @@ a {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 50%; } }
 @keyframes statsSlide57 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 57%; } }
 @keyframes statsSlide60 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 60%; } }
 @keyframes statsSlide75 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 75%; } }
 @keyframes statsSlide76 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 76%; } }
 @keyframes statsSlide80 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 80%; } }
 @keyframes statsSlide82 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 82%; } }
 @keyframes statsSlide85 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 85%; } }
 @keyframes statsSlide93 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 93%; } }
 @keyframes statsSlide95 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 95%; } }
 @keyframes statsSlide97 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 97%; } }
 @keyframes statsSlide99 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 99%; } }
 @keyframes statsSlide101 {
   from {
     width: 0;
     opacity: 0;
-    -webkit-transform: translateX(0%, 0, 0);
-    transform: translateX(0%, 0, 0); }
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
   to {
     opacity: 1;
-    -webkit-transform: translateX(-100%, 0, 0);
-    transform: translateX(-100%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
     width: 101%; } }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2961,7 +2961,8 @@ li.planet-shadow {
     transform: scale(1, 1);
     border-radius: 0%; }
   33% {
-    transform: scale(0.5, 0.75); }
+    transform: scale(0.5, 0.75);
+    border-radius: 0%; }
   66% {
     transform: scale(0.25, 0.5); }
   100% {
