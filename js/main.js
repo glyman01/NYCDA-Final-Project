@@ -1,43 +1,94 @@
+
+// // Setting a cookie for the intro loader
+
+// function svgLoadCookie(){
+	
+// 	// if the cookie 'loaded' does not exist, do this -
+	
+// 	if (!Cookies.get('loaded')){
+// 		Cookies.set('loaded', 'true', {expires: ''});
+	
+// 	// Faking the animation intro
+// 	    var introAnimate = setTimeout(function(){
+
+// 	        $('body').addClass('loaded');
+
+// 	        if ($('body').hasClass('loaded')){
+// 	        	$('.wrapper').delay(0).queue(function(next){
+// 	        		$(this).removeClass('hidden-main-content');
+// 	        		next();
+// 	        	});
+// 	    	}
+	    
+// 	    }, 2800);
+
+
+// 	// otherwise, if the cookie exists do this -
+	
+// 	} else {
+		
+// 		$('body').addClass('loaded');
+
+// 	       $('.wrapper').removeClass('hidden-main-content');
+// 	       $('#loader-wrapper').hide();
+// 	}
+
+// 	mainContent.classList.remove('js-loading');
+// };
+
+// var mainContent = document.getElementById('loader-wrapper');
+// var loader = document.getElementById('loader-content');
+// mainContent.classList.add('js-loading');
+
+// window.addEventListener("load", svgLoadCookie, false);
+
+// function svgLoadCookie() {
+//   mainContent.classList.remove('js-loading');
+// }
+
+
+
+
 // DOM
 $(document).on('ready', function(){
 
 
-	// Setting a cookie for the intro loader
+	// // Setting a cookie for the intro loader
 	
-	function svgLoadCookie(){
+	// function svgLoadCookie(){
 		
-		// if the cookie 'loaded' does not exist, do this -
+	// 	// if the cookie 'loaded' does not exist, do this -
 		
-		if (!Cookies.get('loaded')){
-			Cookies.set('loaded', 'true', {expires: ''});
+	// 	if (!Cookies.get('loaded')){
+	// 		Cookies.set('loaded', 'true', {expires: ''});
 		
-		// Faking the animation intro
-		    var introAnimate = setTimeout(function(){
+	// 	// Faking the animation intro
+	// 	    var introAnimate = setTimeout(function(){
 
-		        $('body').addClass('loaded');
+	// 	        $('body').addClass('loaded');
 
-		        if ($('body').hasClass('loaded')){
-		        	$('.wrapper').delay(0).queue(function(next){
-		        		$(this).removeClass('hidden-main-content');
-		        		next();
-		        	});
-		    	}
+	// 	        if ($('body').hasClass('loaded')){
+	// 	        	$('.wrapper').delay(0).queue(function(next){
+	// 	        		$(this).removeClass('hidden-main-content');
+	// 	        		next();
+	// 	        	});
+	// 	    	}
 		    
-		    }, 2800);
+	// 	    }, 2800);
 
 
-		// otherwise, if the cookie exists do this -
+	// 	// otherwise, if the cookie exists do this -
 		
-		} else {
+	// 	} else {
 			
-			$('body').addClass('loaded');
+	// 		$('body').addClass('loaded');
 
-		       $('.wrapper').removeClass('hidden-main-content');
-		       $('#loader-wrapper').hide();
-		}	
-	};
+	// 	       $('.wrapper').removeClass('hidden-main-content');
+	// 	       $('#loader-wrapper').hide();
+	// 	}	
+	// };
 
-	svgLoadCookie();
+	// svgLoadCookie();
 
 	
 	// initializing swiper
